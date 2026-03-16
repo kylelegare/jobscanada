@@ -12,7 +12,20 @@ Inspired by [Andrej Karpathy's US version](https://karpathy.github.io/jobs/), ad
 
 ## What's here
 
-Canada's NOC 2021 classification covers 516 unit-group occupations spanning every sector of the economy. We scraped occupation profiles from Employment and Social Development Canada's OaSIS system, scored each occupation's AI exposure using an LLM, and built an interactive treemap visualization sized by employment.
+Canada's [National Occupational Classification (NOC 2021)](https://noc.esdc.gc.ca/) is the standard framework used to classify occupations across the Canadian economy. It organizes all jobs into a five-digit code system: the first digit indicates the **broad category** (10 sectors like Health, Trades, Business, etc.), and the second digit indicates the **TEER level** — Training, Education, Experience, and Responsibilities required for the occupation.
+
+### TEER levels
+
+| TEER | Education/training typically required |
+|------|---------------------------------------|
+| 0 | Management occupations |
+| 1 | University degree |
+| 2 | College diploma or apprenticeship (2+ years) |
+| 3 | Secondary school or occupation-specific training |
+| 4 | On-the-job training |
+| 5 | Short work demonstration or no formal education |
+
+NOC 2021 covers 516 unit-group occupations at the five-digit level. We scraped occupation profiles from Employment and Social Development Canada's OaSIS system, scored each occupation's AI exposure using an LLM, and built an interactive treemap visualization sized by employment.
 
 ## Data pipeline
 
