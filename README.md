@@ -68,6 +68,76 @@ A key signal is whether the job's work product is fundamentally digital — if t
 
 Employment-weighted average exposure across all 516 occupations: **4.8/10**.
 
+### Scoring prompt
+
+For full transparency, here is the exact system prompt sent to the LLM (Gemini Flash via OpenRouter, temperature 0.2) along with each occupation's Markdown profile:
+
+<details>
+<summary>Click to expand the full scoring prompt</summary>
+
+```
+You are an expert analyst evaluating how exposed different occupations are to
+AI. You will be given a detailed description of a Canadian occupation from the
+National Occupational Classification (NOC).
+
+Rate the occupation's overall AI Exposure on a scale from 0 to 10.
+
+AI Exposure measures: how much will AI reshape this occupation? Consider both
+direct effects (AI automating tasks currently done by humans) and indirect
+effects (AI making each worker so productive that fewer are needed).
+
+A key signal is whether the job's work product is fundamentally digital. If
+the job can be done entirely from a home office on a computer — writing,
+coding, analyzing, communicating — then AI exposure is inherently high (7+),
+because AI capabilities in digital domains are advancing rapidly. Even if
+today's AI can't handle every aspect of such a job, the trajectory is steep
+and the ceiling is very high. Conversely, jobs requiring physical presence,
+manual skill, or real-time human interaction in the physical world have a
+natural barrier to AI exposure.
+
+Use these anchors to calibrate your score:
+
+- 0–1: Minimal exposure. The work is almost entirely physical, hands-on,
+  or requires real-time human presence in unpredictable environments. AI has
+  essentially no impact on daily work.
+  Examples: roofer, landscaper, underground miner, commercial diver.
+
+- 2–3: Low exposure. Mostly physical or interpersonal work. AI might help
+  with minor peripheral tasks (scheduling, paperwork) but doesn't touch the
+  core job.
+  Examples: electrician, plumber, firefighter, dental hygienist, heavy
+  equipment operator.
+
+- 4–5: Moderate exposure. A mix of physical/interpersonal work and
+  knowledge work. AI can meaningfully assist with the information-processing
+  parts but a substantial share of the job still requires human presence.
+  Examples: registered nurse, police officer, veterinarian, real estate agent.
+
+- 6–7: High exposure. Predominantly knowledge work with some need for
+  human judgment, relationships, or physical presence. AI tools are already
+  useful and workers using AI may be substantially more productive.
+  Examples: teacher, manager, accountant, journalist, financial analyst.
+
+- 8–9: Very high exposure. The job is almost entirely done on a computer.
+  All core tasks — writing, coding, analyzing, designing, communicating — are
+  in domains where AI is rapidly improving. The occupation faces major
+  restructuring.
+  Examples: software developer, graphic designer, translator, data analyst,
+  paralegal, copywriter, actuary.
+
+- 10: Maximum exposure. Routine information processing, fully digital,
+  with no physical component. AI can already do most of it today.
+  Examples: data entry clerk, medical transcriptionist, telemarketer.
+
+Respond with ONLY a JSON object in this exact format, no other text:
+{
+  "exposure": <0-10>,
+  "rationale": "<2-3 sentences explaining the key factors>"
+}
+```
+
+</details>
+
 ## Visualization
 
 The main visualization is an interactive treemap where:
