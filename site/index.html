@@ -313,6 +313,76 @@ body {
   border-top: 1px solid rgba(255,255,255,0.06);
   padding-top: 8px;
 }
+
+/* ─── Mobile toggle button ─── */
+#sidebar-toggle {
+  display: none;
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  z-index: 25;
+  background: var(--bg2);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--fg);
+  font-size: 12px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+/* ─── Mobile ─── */
+@media (max-width: 700px) {
+  body { overflow: auto; height: auto; }
+
+  #sidebar {
+    position: relative;
+    width: 100%;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 16px 16px 12px;
+  }
+  #sidebar.collapsed {
+    max-height: 0;
+    padding: 0 16px;
+    overflow: hidden;
+    border-bottom: none;
+  }
+  #sidebar.collapsed + #breadcrumb { top: 0; }
+
+  #sidebar-toggle { display: block; }
+
+  #treemap {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 70vh;
+  }
+
+  #breadcrumb {
+    position: sticky;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  #card-grid {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 40px 12px 12px;
+  }
+
+  #tooltip {
+    max-width: calc(100vw - 32px);
+    font-size: 12px;
+  }
+
+  .treemap-cell .cell-title { font-size: 11px !important; }
+  .treemap-cell .cell-subtitle { font-size: 9px !important; }
+}
 </style>
 </head>
 <body>
@@ -373,6 +443,8 @@ body {
 <div id="breadcrumb"></div>
 <div id="treemap"></div>
 <div id="card-grid" class="hidden"></div>
+
+<button id="sidebar-toggle" onclick="document.getElementById('sidebar').classList.toggle('collapsed'); this.textContent = document.getElementById('sidebar').classList.contains('collapsed') ? '↑ Stats' : '↓ Hide stats'">↓ Hide stats</button>
 
 <div id="tooltip">
   <div class="tt-title"></div>
@@ -496,7 +568,12 @@ const GAP = 3;
 
 function clearTreemap() { treemapEl.innerHTML = ''; }
 
+function isMobile() { return window.innerWidth <= 700; }
+
 function getTreemapSize() {
+  if (isMobile()) {
+    return { w: window.innerWidth, h: window.innerHeight * 0.7 };
+  }
   return { w: window.innerWidth - 260, h: window.innerHeight };
 }
 
@@ -542,7 +619,16 @@ function renderCategories() {
       <div class="cell-subtitle" style="font-size:${subFontSize}px;color:${tc}">${(r._totalEmp/1000).toFixed(0)}K jobs &middot; avg ${r._avgExposure.toFixed(1)}/10</div>
     </div>`;
 
-    cell.addEventListener('click', () => renderCategory(r._name));
+    cell.addEventListener('click', (e) => {
+      if (isMobile() && !cell._tapped) {
+        e.stopPropagation();
+        cell._tapped = true;
+        showCategoryTooltip(e, r);
+        setTimeout(() => { cell._tapped = false; }, 2000);
+        return;
+      }
+      renderCategory(r._name);
+    });
     cell.addEventListener('mouseenter', (e) => showCategoryTooltip(e, r));
     cell.addEventListener('mousemove', positionTooltip);
     cell.addEventListener('mouseleave', hideTooltip);
@@ -608,6 +694,12 @@ function renderCategory(catName) {
     cell.addEventListener('mouseenter', (e) => showOccupationTooltip(e, r));
     cell.addEventListener('mousemove', positionTooltip);
     cell.addEventListener('mouseleave', hideTooltip);
+    if (isMobile()) {
+      cell.addEventListener('click', (e) => {
+        e.stopPropagation();
+        showOccupationTooltip(e, r);
+      });
+    }
     treemapEl.appendChild(cell);
   }
 
@@ -619,7 +711,7 @@ function updateBreadcrumb() {
   const sub = document.getElementById('subtitleText');
   if (currentView === 'categories') {
     breadcrumb.innerHTML = '<span class="crumb active">All Sectors</span>';
-    sub.innerHTML = '516 occupations scored 0&ndash;10 &middot; sized by employment<br>Data from <a href="https://noc.esdc.gc.ca/">NOC/OaSIS</a> &amp; <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410041601">StatsCan</a>';
+    sub.innerHTML = `516 occupations scored 0&ndash;10 &middot; ${isMobile() ? 'tap' : 'click'} a sector to explore<br>Data from <a href="https://noc.esdc.gc.ca/">NOC/OaSIS</a> &amp; <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410041601">StatsCan</a>`;
   } else {
     breadcrumb.innerHTML = `
       <span class="crumb" onclick="renderCategories()">&larr; All Sectors</span>
@@ -627,7 +719,7 @@ function updateBreadcrumb() {
       <span class="crumb active">${titleCase(currentView)}</span>
     `;
     const count = categoryMap[currentView].items.length;
-    sub.innerHTML = `${count} occupations &middot; sized by median salary &middot; hover for details`;
+    sub.innerHTML = `${count} occupations &middot; sized by employment &middot; ${isMobile() ? 'tap' : 'hover'} for details`;
   }
 }
 
@@ -730,6 +822,19 @@ function showOccupationTooltip(e, r) {
 }
 
 function positionTooltip(e) {
+  if (isMobile()) {
+    tooltip.style.left = '16px';
+    tooltip.style.right = '16px';
+    tooltip.style.width = 'auto';
+    // Position above if near bottom, below otherwise
+    const ty = e.clientY > window.innerHeight * 0.6
+      ? Math.max(8, e.clientY - tooltip.offsetHeight - 16)
+      : e.clientY + 16;
+    tooltip.style.top = ty + 'px';
+    return;
+  }
+  tooltip.style.right = '';
+  tooltip.style.width = '';
   let tx = e.clientX + 16;
   let ty = e.clientY + 16;
   if (tx + 380 > window.innerWidth) tx = e.clientX - 396;
@@ -739,6 +844,11 @@ function positionTooltip(e) {
 }
 
 function hideTooltip() { tooltip.classList.remove('visible'); }
+
+// Dismiss tooltip on tap outside on mobile
+document.addEventListener('click', (e) => {
+  if (isMobile() && !e.target.closest('.treemap-cell')) hideTooltip();
+});
 
 // ─── Init ───────────────────────────────────────────────────────
 async function init() {
@@ -764,6 +874,12 @@ async function init() {
   for (let i = 0; i < 120; i++) {
     lctx.fillStyle = exposureColor(i / 12, 0.85);
     lctx.fillRect(i, 0, 1, 12);
+  }
+
+  // Start collapsed on mobile so treemap is visible immediately
+  if (isMobile()) {
+    document.getElementById('sidebar').classList.add('collapsed');
+    document.getElementById('sidebar-toggle').textContent = '↑ Stats';
   }
 
   renderCategories();
