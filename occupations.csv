@@ -1,0 +1,517 @@
+code,slug,title,category,category_code,teer,teer_desc,median_pay_annual,median_pay_hourly,low_pay_hourly,high_pay_hourly
+00010,legislators,Legislators,Legislative and senior management occupations,0,0,Management,84000,40.38,15.8,88.46
+00011,senior-government-managers-and-officials,Senior government managers and officials,Legislative and senior management occupations,0,0,Management,135990,65.38,40.0,105.77
+00012,senior-managers-financial-communications-and-other-business-services,"Senior managers - financial, communications and other business services",Legislative and senior management occupations,0,0,Management,199992,96.15,51.28,153.85
+00013,senior-managers-health-education-social-and-community-services-and-membership-or,"Senior managers - health, education, social and community services and membership organizations",Legislative and senior management occupations,0,0,Management,,,,
+00014,senior-managers-trade-broadcasting-and-other-services,"Senior managers - trade, broadcasting and other services",Legislative and senior management occupations,0,0,Management,88150,42.38,24.0,98.88
+00015,senior-managers-construction-transportation-production-and-utilities,"Senior managers - construction, transportation, production and utilities",Legislative and senior management occupations,0,0,Management,95763,46.04,24.5,96.68
+10010,financial-managers,Financial managers,"Business, finance and administration occupations",1,0,Management,123718,59.48,38.5,91.76
+10011,human-resources-managers,Human resources managers,"Business, finance and administration occupations",1,0,Management,119995,57.69,37.94,87.18
+10012,purchasing-managers,Purchasing managers,"Business, finance and administration occupations",1,0,Management,116708,56.11,39.34,86.54
+10019,other-administrative-services-managers,Other administrative services managers,"Business, finance and administration occupations",1,0,Management,104000,50.0,29.88,85.16
+10020,insurance-real-estate-and-financial-brokerage-managers,"Insurance, real estate and financial brokerage managers","Business, finance and administration occupations",1,0,Management,123198,59.23,39.62,105.77
+10021,banking-credit-and-other-investment-managers,"Banking, credit and other investment managers","Business, finance and administration occupations",1,0,Management,118851,57.14,37.44,91.35
+10022,advertising-marketing-and-public-relations-managers,"Advertising, marketing and public relations managers","Business, finance and administration occupations",1,0,Management,115003,55.29,34.62,89.74
+10029,other-business-services-managers,Other business services managers,"Business, finance and administration occupations",1,0,Management,102398,49.23,30.65,86.06
+10030,telecommunication-carriers-managers,Telecommunication carriers managers,"Business, finance and administration occupations",1,0,Management,103459,49.74,29.81,72.12
+11100,financial-auditors-and-accountants,Financial auditors and accountants,"Business, finance and administration occupations",1,1,University degree,83948,40.36,25.0,71.43
+11101,financial-and-investment-analysts,Financial and investment analysts,"Business, finance and administration occupations",1,1,University degree,90001,43.27,28.21,72.36
+11102,financial-advisors,Financial advisors,"Business, finance and administration occupations",1,1,University degree,75004,36.06,23.91,73.08
+11103,securities-agents-investment-dealers-and-brokers,"Securities agents, investment dealers and brokers","Business, finance and administration occupations",1,1,University degree,88524,42.56,24.0,88.21
+11109,other-financial-officers,Other financial officers,"Business, finance and administration occupations",1,1,University degree,79996,38.46,24.04,66.67
+11200,human-resources-professionals,Human resources professionals,"Business, finance and administration occupations",1,1,University degree,85009,40.87,26.0,59.77
+11201,professional-occupations-in-business-management-consulting,Professional occupations in business management consulting,"Business, finance and administration occupations",1,1,University degree,91728,44.1,27.0,69.71
+11202,professional-occupations-in-advertising-marketing-and-public-relations,"Professional occupations in advertising, marketing and public relations","Business, finance and administration occupations",1,1,University degree,74006,35.58,20.5,57.44
+12010,supervisors-general-office-and-administrative-support-workers,"Supervisors, general office and administrative support workers","Business, finance and administration occupations",1,2,College diploma or apprenticeship,66560,32.0,22.0,46.0
+12011,supervisors-finance-and-insurance-office-workers,"Supervisors, finance and insurance office workers","Business, finance and administration occupations",1,2,College diploma or apprenticeship,72238,34.73,22.51,51.28
+12012,supervisors-library-correspondence-and-related-information-workers,"Supervisors, library, correspondence and related information workers","Business, finance and administration occupations",1,2,College diploma or apprenticeship,74672,35.9,28.21,44.78
+12013,supervisors-supply-chain-tracking-and-scheduling-coordination-occupations,"Supervisors, supply chain, tracking and scheduling coordination occupations","Business, finance and administration occupations",1,2,College diploma or apprenticeship,60008,28.85,19.9,45.0
+12100,executive-assistants,Executive assistants,"Business, finance and administration occupations",1,2,College diploma or apprenticeship,72009,34.62,25.85,49.0
+12101,human-resources-and-recruitment-officers,Human resources and recruitment officers,"Business, finance and administration occupations",1,2,College diploma or apprenticeship,69326,33.33,22.0,52.73
+12102,procurement-and-purchasing-agents-and-officers,Procurement and purchasing agents and officers,"Business, finance and administration occupations",1,2,College diploma or apprenticeship,75004,36.06,24.68,57.69
+12103,conference-and-event-planners,Conference and event planners,"Business, finance and administration occupations",1,2,College diploma or apprenticeship,59009,28.37,17.65,47.53
+12104,employment-insurance-and-revenue-officers,Employment insurance and revenue officers,"Business, finance and administration occupations",1,2,College diploma or apprenticeship,72529,34.87,27.0,51.65
+12110,court-reporters-medical-transcriptionists-and-related-occupations,"Court reporters, medical transcriptionists and related occupations","Business, finance and administration occupations",1,2,College diploma or apprenticeship,54080,26.0,17.0,36.06
+12111,health-information-management-occupations,Health information management occupations,"Business, finance and administration occupations",1,2,College diploma or apprenticeship,63460,30.51,22.0,46.19
+12112,records-management-technicians,Records management technicians,"Business, finance and administration occupations",1,2,College diploma or apprenticeship,65145,31.32,23.0,45.05
+12113,statistical-officers-and-related-research-support-occupations,Statistical officers and related research support occupations,"Business, finance and administration occupations",1,2,College diploma or apprenticeship,58676,28.21,19.0,44.9
+12200,accounting-technicians-and-bookkeepers,Accounting technicians and bookkeepers,"Business, finance and administration occupations",1,2,College diploma or apprenticeship,58281,28.02,19.55,45.07
+12201,insurance-adjusters-and-claims-examiners,Insurance adjusters and claims examiners,"Business, finance and administration occupations",1,2,College diploma or apprenticeship,72800,35.0,22.56,52.2
+12202,insurance-underwriters,Insurance underwriters,"Business, finance and administration occupations",1,2,College diploma or apprenticeship,72009,34.62,25.0,51.28
+12203,assessors-business-valuators-and-appraisers,"Assessors, business valuators and appraisers","Business, finance and administration occupations",1,2,College diploma or apprenticeship,72800,35.0,26.37,54.0
+13100,administrative-officers,Administrative officers,"Business, finance and administration occupations",1,3,Secondary school or occupation-specific training,60320,29.0,21.0,44.15
+13101,property-administrators,Property administrators,"Business, finance and administration occupations",1,3,Secondary school or occupation-specific training,65000,31.25,18.46,56.41
+13102,payroll-administrators,Payroll administrators,"Business, finance and administration occupations",1,3,Secondary school or occupation-specific training,62400,30.0,20.0,43.27
+13110,administrative-assistants,Administrative assistants,"Business, finance and administration occupations",1,3,Secondary school or occupation-specific training,54995,26.44,19.23,36.88
+13111,legal-administrative-assistants,Legal administrative assistants,"Business, finance and administration occupations",1,3,Secondary school or occupation-specific training,57137,27.47,18.75,41.72
+13112,medical-administrative-assistants,Medical administrative assistants,"Business, finance and administration occupations",1,3,Secondary school or occupation-specific training,52000,25.0,18.92,32.0
+13200,customs-ship-and-other-brokers,"Customs, ship and other brokers","Business, finance and administration occupations",1,3,Secondary school or occupation-specific training,56409,27.12,20.51,36.63
+13201,production-and-transportation-logistics-coordinators,Production and transportation logistics coordinators,"Business, finance and administration occupations",1,3,Secondary school or occupation-specific training,61339,29.49,21.63,44.79
+14100,general-office-support-workers,General office support workers,"Business, finance and administration occupations",1,4,On-the-job training,49899,23.99,16.55,34.0
+14101,receptionists,Receptionists,"Business, finance and administration occupations",1,4,On-the-job training,43680,21.0,16.25,29.0
+14102,personnel-clerks,Personnel clerks,"Business, finance and administration occupations",1,4,On-the-job training,57990,27.88,21.75,38.46
+14103,court-clerks-and-related-court-services-occupations,Court clerks and related court services occupations,"Business, finance and administration occupations",1,4,On-the-job training,62004,29.81,24.0,37.0
+14110,survey-interviewers-and-statistical-clerks,Survey interviewers and statistical clerks,"Business, finance and administration occupations",1,4,On-the-job training,45760,22.0,15.5,40.0
+14111,data-entry-clerks,Data entry clerks,"Business, finance and administration occupations",1,4,On-the-job training,48880,23.5,17.0,32.6
+14112,desktop-publishing-operators-and-related-occupations,Desktop publishing operators and related occupations,"Business, finance and administration occupations",1,4,On-the-job training,49441,23.77,18.0,32.5
+14200,accounting-and-related-clerks,Accounting and related clerks,"Business, finance and administration occupations",1,4,On-the-job training,52000,25.0,18.46,35.71
+14201,banking-insurance-and-other-financial-clerks,"Banking, insurance and other financial clerks","Business, finance and administration occupations",1,4,On-the-job training,52686,25.33,18.46,36.62
+14202,collection-clerks,Collection clerks,"Business, finance and administration occupations",1,4,On-the-job training,58656,28.2,17.25,37.91
+14300,library-assistants-and-clerks,Library assistants and clerks,"Business, finance and administration occupations",1,4,On-the-job training,48193,23.17,15.8,34.0
+14301,correspondence-publication-and-regulatory-clerks,"Correspondence, publication and regulatory clerks","Business, finance and administration occupations",1,4,On-the-job training,59425,28.57,20.48,39.0
+14400,shippers-and-receivers,Shippers and receivers,"Business, finance and administration occupations",1,4,On-the-job training,46800,22.5,17.0,31.0
+14401,storekeepers-and-partspersons,Storekeepers and partspersons,"Business, finance and administration occupations",1,4,On-the-job training,54080,26.0,19.17,40.0
+14402,production-logistics-workers,Production logistics workers,"Business, finance and administration occupations",1,4,On-the-job training,64001,30.77,22.0,40.06
+14403,purchasing-and-inventory-control-workers,Purchasing and inventory control workers,"Business, finance and administration occupations",1,4,On-the-job training,49920,24.0,17.5,36.06
+14404,dispatchers,Dispatchers,"Business, finance and administration occupations",1,4,On-the-job training,58240,28.0,20.0,41.76
+14405,transportation-route-and-crew-schedulers,Transportation route and crew schedulers,"Business, finance and administration occupations",1,4,On-the-job training,67995,32.69,21.68,52.2
+20010,engineering-managers,Engineering managers,Natural and applied sciences and related occupations,2,0,Management,149323,71.79,44.42,106.25
+20011,architecture-and-science-managers,Architecture and science managers,Natural and applied sciences and related occupations,2,0,Management,130124,62.56,43.27,98.9
+20012,computer-and-information-systems-managers,Computer and information systems managers,Natural and applied sciences and related occupations,2,0,Management,138673,66.67,43.75,103.37
+21100,physicists-and-astronomers,Physicists and astronomers,Natural and applied sciences and related occupations,2,1,University degree,117499,56.49,34.95,96.15
+21101,chemists,Chemists,Natural and applied sciences and related occupations,2,1,University degree,79996,38.46,24.0,65.93
+21102,geoscientists-and-oceanographers,Geoscientists and oceanographers,Natural and applied sciences and related occupations,2,1,University degree,104000,50.0,30.77,100.0
+21103,meteorologists-and-climatologists,Meteorologists and climatologists,Natural and applied sciences and related occupations,2,1,University degree,112195,53.94,33.89,75.12
+21109,other-professional-occupations-in-physical-sciences,Other professional occupations in physical sciences,Natural and applied sciences and related occupations,2,1,University degree,89440,43.0,27.78,75.9
+21110,biologists-and-related-scientists,Biologists and related scientists,Natural and applied sciences and related occupations,2,1,University degree,83200,40.0,25.71,66.67
+21111,forestry-professionals,Forestry professionals,Natural and applied sciences and related occupations,2,1,University degree,97760,47.0,31.39,62.5
+21112,agricultural-representatives-consultants-and-specialists,"Agricultural representatives, consultants and specialists",Natural and applied sciences and related occupations,2,1,University degree,83200,40.0,25.72,55.29
+21120,public-and-environmental-health-and-safety-professionals,Public and environmental health and safety professionals,Natural and applied sciences and related occupations,2,1,University degree,93600,45.0,29.33,56.41
+21200,architects,Architects,Natural and applied sciences and related occupations,2,1,University degree,80995,38.94,26.44,74.52
+21201,landscape-architects,Landscape architects,Natural and applied sciences and related occupations,2,1,University degree,85009,40.87,22.53,82.05
+21202,urban-and-land-use-planners,Urban and land use planners,Natural and applied sciences and related occupations,2,1,University degree,95992,46.15,28.21,65.0
+21203,land-surveyors,Land surveyors,Natural and applied sciences and related occupations,2,1,University degree,87776,42.2,29.0,60.51
+21210,mathematicians-statisticians-and-actuaries,"Mathematicians, statisticians and actuaries",Natural and applied sciences and related occupations,2,1,University degree,106080,51.0,31.25,77.33
+21211,data-scientists,Data scientists,Natural and applied sciences and related occupations,2,1,University degree,95992,46.15,30.0,69.74
+21220,cybersecurity-specialists,Cybersecurity specialists,Natural and applied sciences and related occupations,2,1,University degree,103001,49.52,30.0,72.12
+21221,business-systems-specialists,Business systems specialists,Natural and applied sciences and related occupations,2,1,University degree,93870,45.13,30.67,62.5
+21222,information-systems-specialists,Information systems specialists,Natural and applied sciences and related occupations,2,1,University degree,95992,46.15,28.85,68.68
+21223,database-analysts-and-data-administrators,Database analysts and data administrators,Natural and applied sciences and related occupations,2,1,University degree,85009,40.87,25.0,61.03
+21230,computer-systems-developers-and-programmers,Computer systems developers and programmers,Natural and applied sciences and related occupations,2,1,University degree,90001,43.27,25.43,65.0
+21231,software-engineers-and-designers,Software engineers and designers,Natural and applied sciences and related occupations,2,1,University degree,117499,56.49,35.0,91.35
+21232,software-developers-and-programmers,Software developers and programmers,Natural and applied sciences and related occupations,2,1,University degree,100006,48.08,30.0,76.92
+21233,web-designers,Web designers,Natural and applied sciences and related occupations,2,1,University degree,69992,33.65,20.0,57.69
+21234,web-developers-and-programmers,Web developers and programmers,Natural and applied sciences and related occupations,2,1,University degree,79996,38.46,21.48,57.16
+21300,civil-engineers,Civil engineers,Natural and applied sciences and related occupations,2,1,University degree,101004,48.56,32.0,72.12
+21301,mechanical-engineers,Mechanical engineers,Natural and applied sciences and related occupations,2,1,University degree,94993,45.67,30.0,72.49
+21310,electrical-and-electronics-engineers,Electrical and electronics engineers,Natural and applied sciences and related occupations,2,1,University degree,105393,50.67,33.65,79.23
+21311,computer-engineers-except-software-engineers-and-designers,Computer engineers (except software engineers and designers),Natural and applied sciences and related occupations,2,1,University degree,109200,52.5,32.05,78.85
+21320,chemical-engineers,Chemical engineers,Natural and applied sciences and related occupations,2,1,University degree,107993,51.92,27.45,76.92
+21321,industrial-and-manufacturing-engineers,Industrial and manufacturing engineers,Natural and applied sciences and related occupations,2,1,University degree,91998,44.23,29.0,75.0
+21322,metallurgical-and-materials-engineers,Metallurgical and materials engineers,Natural and applied sciences and related occupations,2,1,University degree,100006,48.08,33.17,66.35
+21330,mining-engineers,Mining engineers,Natural and applied sciences and related occupations,2,1,University degree,124800,60.0,37.02,115.38
+21331,geological-engineers,Geological engineers,Natural and applied sciences and related occupations,2,1,University degree,103604,49.81,31.27,83.24
+21332,petroleum-engineers,Petroleum engineers,Natural and applied sciences and related occupations,2,1,University degree,134992,64.9,46.25,96.15
+21390,aerospace-engineers,Aerospace engineers,Natural and applied sciences and related occupations,2,1,University degree,104000,50.0,33.76,100.0
+21399,other-professional-engineers,Other professional engineers,Natural and applied sciences and related occupations,2,1,University degree,104000,50.0,28.0,82.42
+22100,chemical-technologists-and-technicians,Chemical technologists and technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,61984,29.8,21.0,47.69
+22101,geological-and-mineral-technologists-and-technicians,Geological and mineral technologists and technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,63502,30.53,20.95,52.0
+22110,biological-technologists-and-technicians,Biological technologists and technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,60569,29.12,19.5,43.0
+22111,agricultural-and-fish-products-inspectors,Agricultural and fish products inspectors,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,72800,35.0,27.0,55.0
+22112,forestry-technologists-and-technicians,Forestry technologists and technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,68577,32.97,22.5,44.71
+22113,conservation-and-fishery-officers,Conservation and fishery officers,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,74672,35.9,22.0,51.28
+22114,landscape-and-horticulture-technicians-and-specialists,Landscape and horticulture technicians and specialists,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,62400,30.0,21.0,40.87
+22210,architectural-technologists-and-technicians,Architectural technologists and technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,62608,30.1,21.0,50.68
+22211,industrial-designers,Industrial designers,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,75004,36.06,23.0,49.74
+22212,drafting-technologists-and-technicians,Drafting technologists and technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,66123,31.79,21.5,48.38
+22213,land-survey-technologists-and-technicians,Land survey technologists and technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,61880,29.75,22.0,46.0
+22214,technical-occupations-in-geomatics-and-meteorology,Technical occupations in geomatics and meteorology,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,79248,38.1,23.08,53.85
+22220,computer-network-and-web-technicians,Computer network and web technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,74880,36.0,21.0,55.0
+22221,user-support-technicians,User support technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,65457,31.47,20.5,49.0
+22222,information-systems-testing-technicians,Information systems testing technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,72800,35.0,17.5,51.28
+22230,non-destructive-testers-and-inspectors,Non-destructive testers and inspectors,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,74880,36.0,21.13,52.48
+22231,engineering-inspectors-and-regulatory-officers,Engineering inspectors and regulatory officers,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,75088,36.1,24.0,67.18
+22232,occupational-health-and-safety-specialists,Occupational health and safety specialists,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,85238,40.98,23.56,61.03
+22233,construction-inspectors,Construction inspectors,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,79996,38.46,24.52,54.95
+22300,civil-engineering-technologists-and-technicians,Civil engineering technologists and technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,70491,33.89,22.0,51.1
+22301,mechanical-engineering-technologists-and-technicians,Mechanical engineering technologists and technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,72800,35.0,23.08,51.28
+22302,industrial-engineering-and-manufacturing-technologists-and-technicians,Industrial engineering and manufacturing technologists and technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,65000,31.25,21.0,46.25
+22303,construction-estimators,Construction estimators,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,78707,37.84,24.04,61.54
+22310,electrical-and-electronics-engineering-technologists-and-technicians,Electrical and electronics engineering technologists and technicians,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,74006,35.58,24.04,55.34
+22311,electronic-service-technicians-household-and-business-equipment,Electronic service technicians (household and business equipment),Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,55120,26.5,18.0,41.35
+22312,industrial-instrument-technicians-and-mechanics,Industrial instrument technicians and mechanics,Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,95680,46.0,31.0,65.78
+22313,aircraft-instrument-electrical-and-avionics-mechanics-technicians-and-inspectors,"Aircraft instrument, electrical and avionics mechanics, technicians and inspectors",Natural and applied sciences and related occupations,2,2,College diploma or apprenticeship,84177,40.47,26.27,57.4
+30010,managers-in-health-care,Managers in health care,Health occupations,3,0,Management,115003,55.29,35.0,79.33
+31100,specialists-in-clinical-and-laboratory-medicine,Specialists in clinical and laboratory medicine,Health occupations,3,1,University degree,311297,149.66,60.8,291.92
+31101,specialists-in-surgery,Specialists in surgery,Health occupations,3,1,University degree,419180,201.53,69.46,368.62
+31102,general-practitioners-and-family-physicians,General practitioners and family physicians,Health occupations,3,1,University degree,232227,111.65,43.67,209.25
+31103,veterinarians,Veterinarians,Health occupations,3,1,University degree,124800,60.0,34.15,84.13
+31110,dentists,Dentists,Health occupations,3,1,University degree,110000,52.88,15.8,109.62
+31111,optometrists,Optometrists,Health occupations,3,1,University degree,81000,38.94,15.8,77.88
+31112,audiologists-and-speech-language-pathologists,Audiologists and speech-language pathologists,Health occupations,3,1,University degree,95992,46.15,33.33,59.52
+31120,pharmacists,Pharmacists,Health occupations,3,1,University degree,115419,55.49,40.0,67.0
+31121,dietitians-and-nutritionists,Dietitians and nutritionists,Health occupations,3,1,University degree,86590,41.63,22.53,50.0
+31200,psychologists,Psychologists,Health occupations,3,1,University degree,109990,52.88,37.65,77.43
+31201,chiropractors,Chiropractors,Health occupations,3,1,University degree,62000,29.81,15.8,66.35
+31202,physiotherapists,Physiotherapists,Health occupations,3,1,University degree,95992,46.15,30.0,56.21
+31203,occupational-therapists,Occupational therapists,Health occupations,3,1,University degree,95680,46.0,36.17,55.0
+31204,kinesiologists-and-other-professional-occupations-in-therapy-and-assessment,Kinesiologists and other professional occupations in therapy and assessment,Health occupations,3,1,University degree,66560,32.0,22.0,49.73
+31209,other-professional-occupations-in-health-diagnosing-and-treating,Other professional occupations in health diagnosing and treating,Health occupations,3,1,University degree,56800,27.31,15.8,59.13
+31300,nursing-coordinators-and-supervisors,Nursing coordinators and supervisors,Health occupations,3,1,University degree,96574,46.43,29.11,59.0
+31301,registered-nurses-and-registered-psychiatric-nurses,Registered nurses and registered psychiatric nurses,Health occupations,3,1,University degree,90001,43.27,30.0,54.37
+31302,nurse-practitioners,Nurse practitioners,Health occupations,3,1,University degree,128003,61.54,42.0,75.0
+31303,physician-assistants-midwives-and-allied-health-professionals,"Physician assistants, midwives and allied health professionals",Health occupations,3,1,University degree,97364,46.81,24.09,60.26
+32100,opticians,Opticians,Health occupations,3,2,College diploma or apprenticeship,59280,28.5,17.8,39.4
+32101,licensed-practical-nurses,Licensed practical nurses,Health occupations,3,2,College diploma or apprenticeship,65145,31.32,25.0,38.0
+32102,paramedical-occupations,Paramedical occupations,Health occupations,3,2,College diploma or apprenticeship,79040,38.0,25.56,49.0
+32103,respiratory-therapists-clinical-perfusionists-and-cardiopulmonary-technologists,"Respiratory therapists, clinical perfusionists and cardiopulmonary technologists",Health occupations,3,2,College diploma or apprenticeship,85280,41.0,30.16,51.0
+32104,animal-health-technologists-and-veterinary-technicians,Animal health technologists and veterinary technicians,Health occupations,3,2,College diploma or apprenticeship,47840,23.0,17.0,33.16
+32109,other-technical-occupations-in-therapy-and-assessment,Other technical occupations in therapy and assessment,Health occupations,3,2,College diploma or apprenticeship,55848,26.85,17.62,36.71
+32110,denturists,Denturists,Health occupations,3,2,College diploma or apprenticeship,54000,25.96,15.8,58.65
+32111,dental-hygienists-and-dental-therapists,Dental hygienists and dental therapists,Health occupations,3,2,College diploma or apprenticeship,93600,45.0,32.0,60.0
+32112,dental-technologists-and-technicians,Dental technologists and technicians,Health occupations,3,2,College diploma or apprenticeship,60320,29.0,19.0,45.0
+32120,medical-laboratory-technologists,Medical laboratory technologists,Health occupations,3,2,College diploma or apprenticeship,81120,39.0,25.13,49.0
+32121,medical-radiation-technologists,Medical radiation technologists,Health occupations,3,2,College diploma or apprenticeship,83200,40.0,29.81,51.12
+32122,medical-sonographers,Medical sonographers,Health occupations,3,2,College diploma or apprenticeship,87360,42.0,34.9,51.0
+32123,cardiology-technologists-and-electrophysiological-diagnostic-technologists,Cardiology technologists and electrophysiological diagnostic technologists,Health occupations,3,2,College diploma or apprenticeship,70720,34.0,23.0,51.0
+32124,pharmacy-technicians,Pharmacy technicians,Health occupations,3,2,College diploma or apprenticeship,51646,24.83,17.5,34.2
+32129,other-medical-technologists-and-technicians,Other medical technologists and technicians,Health occupations,3,2,College diploma or apprenticeship,58240,28.0,21.0,40.0
+32200,traditional-chinese-medicine-practitioners-and-acupuncturists,Traditional Chinese medicine practitioners and acupuncturists,Health occupations,3,2,College diploma or apprenticeship,32867,15.8,15.8,38.22
+32201,massage-therapists,Massage therapists,Health occupations,3,2,College diploma or apprenticeship,32867,15.8,15.8,30.0
+32209,other-practitioners-of-natural-healing,Other practitioners of natural healing,Health occupations,3,2,College diploma or apprenticeship,32867,15.8,15.8,36.78
+33100,dental-assistants-and-dental-laboratory-assistants,Dental assistants and dental laboratory assistants,Health occupations,3,3,Secondary school or occupation-specific training,56160,27.0,21.0,35.0
+33101,medical-laboratory-assistants-and-related-technical-occupations,Medical laboratory assistants and related technical occupations,Health occupations,3,3,Secondary school or occupation-specific training,56160,27.0,19.18,36.11
+33102,nurse-aides-orderlies-and-patient-service-associates,"Nurse aides, orderlies and patient service associates",Health occupations,3,3,Secondary school or occupation-specific training,49920,24.0,19.0,28.84
+33103,pharmacy-technical-assistants-and-pharmacy-assistants,Pharmacy technical assistants and pharmacy assistants,Health occupations,3,3,Secondary school or occupation-specific training,41600,20.0,16.0,26.0
+33109,other-assisting-occupations-in-support-of-health-services,Other assisting occupations in support of health services,Health occupations,3,3,Secondary school or occupation-specific training,47840,23.0,18.0,29.81
+40010,government-managers-health-and-social-policy-development-and-program-administrat,Government managers - health and social policy development and program administration,"Occupations in education, law and social, community and government services",4,0,Management,128003,61.54,46.0,75.0
+40011,government-managers-economic-analysis-policy-development-and-program-administrat,"Government managers - economic analysis, policy development and program administration","Occupations in education, law and social, community and government services",4,0,Management,131872,63.4,47.6,80.22
+40012,government-managers-education-policy-development-and-program-administration,Government managers - education policy development and program administration,"Occupations in education, law and social, community and government services",4,0,Management,132579,63.74,47.01,68.68
+40019,other-managers-in-public-administration,Other managers in public administration,"Occupations in education, law and social, community and government services",4,0,Management,125860,60.51,40.87,80.13
+40020,administrators-post-secondary-education-and-vocational-training,Administrators - post-secondary education and vocational training,"Occupations in education, law and social, community and government services",4,0,Management,117332,56.41,35.9,91.35
+40021,school-principals-and-administrators-of-elementary-and-secondary-education,School principals and administrators of elementary and secondary education,"Occupations in education, law and social, community and government services",4,0,Management,115003,55.29,36.54,71.51
+40030,managers-in-social-community-and-correctional-services,"Managers in social, community and correctional services","Occupations in education, law and social, community and government services",4,0,Management,91436,43.96,27.0,71.43
+40040,commissioned-police-officers-and-related-occupations-in-public-protection-servic,Commissioned police officers and related occupations in public protection services,"Occupations in education, law and social, community and government services",4,0,Management,143000,68.75,51.28,93.75
+40041,fire-chiefs-and-senior-firefighting-officers,Fire chiefs and senior firefighting officers,"Occupations in education, law and social, community and government services",4,0,Management,130291,62.64,37.02,83.84
+40042,commissioned-officers-of-the-canadian-armed-forces,Commissioned officers of the Canadian Armed Forces,"Occupations in education, law and social, community and government services",4,0,Management,114462,55.03,34.62,74.83
+41100,judges,Judges,"Occupations in education, law and social, community and government services",4,1,University degree,387006,186.06,149.04,199.47
+41101,lawyers-and-quebec-notaries,Lawyers and Quebec notaries,"Occupations in education, law and social, community and government services",4,1,University degree,124300,59.76,30.22,107.14
+41200,university-professors-and-lecturers,University professors and lecturers,"Occupations in education, law and social, community and government services",4,1,University degree,122491,58.89,30.46,92.31
+41201,post-secondary-teaching-and-research-assistants,Post-secondary teaching and research assistants,"Occupations in education, law and social, community and government services",4,1,University degree,56160,27.0,15.53,47.0
+41210,college-and-other-vocational-instructors,College and other vocational instructors,"Occupations in education, law and social, community and government services",4,1,University degree,93600,45.0,24.04,73.72
+41220,secondary-school-teachers,Secondary school teachers,"Occupations in education, law and social, community and government services",4,1,University degree,94993,45.67,28.85,59.76
+41221,elementary-school-and-kindergarten-teachers,Elementary school and kindergarten teachers,"Occupations in education, law and social, community and government services",4,1,University degree,90001,43.27,26.67,56.59
+41300,social-workers,Social workers,"Occupations in education, law and social, community and government services",4,1,University degree,79996,38.46,25.0,50.26
+41301,therapists-in-counselling-and-related-specialized-therapies,Therapists in counselling and related specialized therapies,"Occupations in education, law and social, community and government services",4,1,University degree,70720,34.0,23.0,50.0
+41302,religious-leaders,Religious leaders,"Occupations in education, law and social, community and government services",4,1,University degree,57262,27.53,17.31,44.07
+41310,police-investigators-and-other-investigative-occupations,Police investigators and other investigative occupations,"Occupations in education, law and social, community and government services",4,1,University degree,116001,55.77,38.46,67.0
+41311,probation-and-parole-officers,Probation and parole officers,"Occupations in education, law and social, community and government services",4,1,University degree,83928,40.35,30.39,56.25
+41320,educational-counsellors,Educational counsellors,"Occupations in education, law and social, community and government services",4,1,University degree,84947,40.84,23.25,53.57
+41321,career-development-practitioners-and-career-counsellors-except-education,Career development practitioners and career counsellors (except education),"Occupations in education, law and social, community and government services",4,1,University degree,62296,29.95,22.56,43.41
+41400,natural-and-applied-science-policy-researchers-consultants-and-program-officers,"Natural and applied science policy researchers, consultants and program officers","Occupations in education, law and social, community and government services",4,1,University degree,90001,43.27,28.57,65.38
+41401,economists-and-economic-policy-researchers-and-analysts,Economists and economic policy researchers and analysts,"Occupations in education, law and social, community and government services",4,1,University degree,100006,48.08,33.65,71.79
+41402,business-development-officers-and-market-researchers-and-analysts,Business development officers and market researchers and analysts,"Occupations in education, law and social, community and government services",4,1,University degree,91520,44.0,27.64,69.23
+41403,social-policy-researchers-consultants-and-program-officers,"Social policy researchers, consultants and program officers","Occupations in education, law and social, community and government services",4,1,University degree,88524,42.56,26.67,60.0
+41404,health-policy-researchers-consultants-and-program-officers,"Health policy researchers, consultants and program officers","Occupations in education, law and social, community and government services",4,1,University degree,89606,43.08,27.0,60.0
+41405,education-policy-researchers-consultants-and-program-officers,"Education policy researchers, consultants and program officers","Occupations in education, law and social, community and government services",4,1,University degree,86361,41.52,26.64,57.69
+41406,recreation-sports-and-fitness-policy-researchers-consultants-and-program-officer,"Recreation, sports and fitness policy researchers, consultants and program officers","Occupations in education, law and social, community and government services",4,1,University degree,64480,31.0,21.0,47.8
+41407,program-officers-unique-to-government,Program officers unique to government,"Occupations in education, law and social, community and government services",4,1,University degree,90916,43.71,26.83,66.67
+41409,other-professional-occupations-in-social-science,Other professional occupations in social science,"Occupations in education, law and social, community and government services",4,1,University degree,83200,40.0,26.15,62.0
+42100,police-officers-except-commissioned,Police officers (except commissioned),"Occupations in education, law and social, community and government services",4,2,College diploma or apprenticeship,104000,50.0,32.0,64.1
+42101,firefighters,Firefighters,"Occupations in education, law and social, community and government services",4,2,College diploma or apprenticeship,95243,45.79,29.0,61.4
+42102,specialized-members-of-the-canadian-armed-forces,Specialized members of the Canadian Armed Forces,"Occupations in education, law and social, community and government services",4,2,College diploma or apprenticeship,73694,35.43,25.15,45.45
+42200,paralegals-and-related-occupations,Paralegals and related occupations,"Occupations in education, law and social, community and government services",4,2,College diploma or apprenticeship,68744,33.05,21.63,52.19
+42201,social-and-community-service-workers,Social and community service workers,"Occupations in education, law and social, community and government services",4,2,College diploma or apprenticeship,54080,26.0,19.0,36.06
+42202,early-childhood-educators-and-assistants,Early childhood educators and assistants,"Occupations in education, law and social, community and government services",4,2,College diploma or apprenticeship,46384,22.3,16.95,30.03
+42203,instructors-of-persons-with-disabilities,Instructors of persons with disabilities,"Occupations in education, law and social, community and government services",4,2,College diploma or apprenticeship,62400,30.0,20.0,35.9
+42204,religion-workers,Religion workers,"Occupations in education, law and social, community and government services",4,2,College diploma or apprenticeship,41995,20.19,15.0,37.61
+43100,elementary-and-secondary-school-teacher-assistants,Elementary and secondary school teacher assistants,"Occupations in education, law and social, community and government services",4,3,Secondary school or occupation-specific training,52020,25.01,18.29,32.42
+43109,other-instructors,Other instructors,"Occupations in education, law and social, community and government services",4,3,Secondary school or occupation-specific training,41600,20.0,15.0,31.5
+43200,sheriffs-and-bailiffs,Sheriffs and bailiffs,"Occupations in education, law and social, community and government services",4,3,Secondary school or occupation-specific training,69992,33.65,21.63,42.0
+43201,correctional-service-officers,Correctional service officers,"Occupations in education, law and social, community and government services",4,3,Secondary school or occupation-specific training,75192,36.15,28.85,46.15
+43202,by-law-enforcement-and-other-regulatory-officers,By-law enforcement and other regulatory officers,"Occupations in education, law and social, community and government services",4,3,Secondary school or occupation-specific training,76793,36.92,24.0,50.14
+43203,border-services-customs-and-immigration-officers,"Border services, customs, and immigration officers","Occupations in education, law and social, community and government services",4,3,Secondary school or occupation-specific training,83408,40.1,24.62,54.34
+43204,operations-members-of-the-canadian-armed-forces,Operations Members of the Canadian Armed Forces,"Occupations in education, law and social, community and government services",4,3,Secondary school or occupation-specific training,71448,34.35,25.95,44.57
+44100,home-child-care-providers,Home child care providers,"Occupations in education, law and social, community and government services",4,4,On-the-job training,39520,19.0,15.0,28.0
+44101,home-support-workers-caregivers-and-related-occupations,"Home support workers, caregivers and related occupations","Occupations in education, law and social, community and government services",4,4,On-the-job training,42640,20.5,16.0,27.0
+44200,primary-combat-members-of-the-canadian-armed-forces,Primary combat members of the Canadian Armed Forces,"Occupations in education, law and social, community and government services",4,4,On-the-job training,76315,36.69,22.0,47.8
+45100,student-monitors-crossing-guards-and-related-occupations,"Student monitors, crossing guards and related occupations","Occupations in education, law and social, community and government services",4,5,Short work demonstration,41600,20.0,15.5,26.0
+50010,library-archive-museum-and-art-gallery-managers,"Library, archive, museum and art gallery managers","Occupations in art, culture, recreation and sport",5,0,Management,93600,45.0,24.73,76.92
+50011,managers-publishing-motion-pictures-broadcasting-and-performing-arts,"Managers - publishing, motion pictures, broadcasting and performing arts","Occupations in art, culture, recreation and sport",5,0,Management,104998,50.48,30.0,82.42
+50012,recreation-sports-and-fitness-program-and-service-directors,"Recreation, sports and fitness program and service directors","Occupations in art, culture, recreation and sport",5,0,Management,76190,36.63,22.0,76.92
+51100,librarians,Librarians,"Occupations in art, culture, recreation and sport",5,1,University degree,85716,41.21,23.08,67.9
+51101,conservators-and-curators,Conservators and curators,"Occupations in art, culture, recreation and sport",5,1,University degree,75628,36.36,23.54,54.74
+51102,archivists,Archivists,"Occupations in art, culture, recreation and sport",5,1,University degree,81619,39.24,20.0,54.09
+51110,editors,Editors,"Occupations in art, culture, recreation and sport",5,1,University degree,72009,34.62,20.0,50.0
+51111,authors-and-writers-except-technical,Authors and writers (except technical),"Occupations in art, culture, recreation and sport",5,1,University degree,76564,36.81,25.48,53.0
+51112,technical-writers,Technical writers,"Occupations in art, culture, recreation and sport",5,1,University degree,75004,36.06,27.0,53.37
+51113,journalists,Journalists,"Occupations in art, culture, recreation and sport",5,1,University degree,76793,36.92,20.19,62.5
+51114,translators-terminologists-and-interpreters,"Translators, terminologists and interpreters","Occupations in art, culture, recreation and sport",5,1,University degree,70616,33.95,20.0,51.0
+51120,producers-directors-choreographers-and-related-occupations,"Producers, directors, choreographers and related occupations","Occupations in art, culture, recreation and sport",5,1,University degree,85342,41.03,22.0,70.0
+51121,conductors-composers-and-arrangers,"Conductors, composers and arrangers","Occupations in art, culture, recreation and sport",5,1,University degree,36000,17.31,15.8,48.56
+51122,musicians-and-singers,Musicians and singers,"Occupations in art, culture, recreation and sport",5,1,University degree,32867,15.8,15.8,35.82
+52100,library-and-public-archive-technicians,Library and public archive technicians,"Occupations in art, culture, recreation and sport",5,2,College diploma or apprenticeship,58240,28.0,20.0,36.56
+52110,film-and-video-camera-operators,Film and video camera operators,"Occupations in art, culture, recreation and sport",5,2,College diploma or apprenticeship,75608,36.35,19.0,55.0
+52111,graphic-arts-technicians,Graphic arts technicians,"Occupations in art, culture, recreation and sport",5,2,College diploma or apprenticeship,72716,34.96,20.75,67.31
+52112,broadcast-technicians,Broadcast technicians,"Occupations in art, culture, recreation and sport",5,2,College diploma or apprenticeship,77147,37.09,24.75,51.03
+52113,audio-and-video-recording-technicians,Audio and video recording technicians,"Occupations in art, culture, recreation and sport",5,2,College diploma or apprenticeship,68348,32.86,21.0,45.46
+52114,announcers-and-other-broadcasters,Announcers and other broadcasters,"Occupations in art, culture, recreation and sport",5,2,College diploma or apprenticeship,58177,27.97,17.63,57.69
+52119,other-technical-and-coordinating-occupations-in-motion-pictures-broadcasting-and,"Other technical and coordinating occupations in motion pictures, broadcasting and the performing arts","Occupations in art, culture, recreation and sport",5,2,College diploma or apprenticeship,68640,33.0,21.0,43.0
+52120,graphic-designers-and-illustrators,Graphic designers and illustrators,"Occupations in art, culture, recreation and sport",5,2,College diploma or apprenticeship,65000,31.25,20.0,52.88
+52121,interior-designers-and-interior-decorators,Interior designers and interior decorators,"Occupations in art, culture, recreation and sport",5,2,College diploma or apprenticeship,60008,28.85,18.35,48.72
+53100,registrars-restorers-interpreters-and-other-occupations-related-to-museum-and-ar,"Registrars, restorers, interpreters and other occupations related to museum and art galleries","Occupations in art, culture, recreation and sport",5,3,Secondary school or occupation-specific training,42702,20.53,16.0,31.0
+53110,photographers,Photographers,"Occupations in art, culture, recreation and sport",5,3,Secondary school or occupation-specific training,50003,24.04,17.5,48.63
+53111,motion-pictures-broadcasting-photography-and-performing-arts-assistants-and-oper,"Motion pictures, broadcasting, photography and performing arts assistants and operators","Occupations in art, culture, recreation and sport",5,3,Secondary school or occupation-specific training,55744,26.8,18.0,40.0
+53120,dancers,Dancers,"Occupations in art, culture, recreation and sport",5,3,Secondary school or occupation-specific training,68515,32.94,20.1,50.0
+53121,actors-comedians-and-circus-performers,"Actors, comedians and circus performers","Occupations in art, culture, recreation and sport",5,3,Secondary school or occupation-specific training,50190,24.13,16.75,39.97
+53122,painters-sculptors-and-other-visual-artists,"Painters, sculptors and other visual artists","Occupations in art, culture, recreation and sport",5,3,Secondary school or occupation-specific training,61505,29.57,18.75,45.09
+53123,theatre-fashion-exhibit-and-other-creative-designers,"Theatre, fashion, exhibit and other creative designers","Occupations in art, culture, recreation and sport",5,3,Secondary school or occupation-specific training,65000,31.25,17.85,47.96
+53124,artisans-and-craftspersons,Artisans and craftspersons,"Occupations in art, culture, recreation and sport",5,3,Secondary school or occupation-specific training,41600,20.0,15.6,28.0
+53125,patternmakers-textile-leather-and-fur-products,"Patternmakers - textile, leather and fur products","Occupations in art, culture, recreation and sport",5,3,Secondary school or occupation-specific training,57158,27.48,18.5,39.7
+53200,athletes,Athletes,"Occupations in art, culture, recreation and sport",5,3,Secondary school or occupation-specific training,57200,27.5,18.0,51.71
+53201,coaches,Coaches,"Occupations in art, culture, recreation and sport",5,3,Secondary school or occupation-specific training,52000,25.0,16.0,43.27
+53202,sports-officials-and-referees,Sports officials and referees,"Occupations in art, culture, recreation and sport",5,3,Secondary school or occupation-specific training,39520,19.0,15.0,30.0
+54100,program-leaders-and-instructors-in-recreation-sport-and-fitness,"Program leaders and instructors in recreation, sport and fitness","Occupations in art, culture, recreation and sport",5,4,On-the-job training,39520,19.0,15.44,31.0
+55109,other-performers,Other performers,"Occupations in art, culture, recreation and sport",5,5,Short work demonstration,59238,28.48,17.0,49.84
+60010,corporate-sales-managers,Corporate sales managers,Sales and service occupations,6,0,Management,125008,60.1,36.54,112.0
+60020,retail-and-wholesale-trade-managers,Retail and wholesale trade managers,Sales and service occupations,6,0,Management,88899,42.74,21.63,80.77
+60030,restaurant-and-food-service-managers,Restaurant and food service managers,Sales and service occupations,6,0,Management,54080,26.0,18.0,48.08
+60031,accommodation-service-managers,Accommodation service managers,Sales and service occupations,6,0,Management,79040,38.0,21.54,71.15
+60040,managers-in-customer-and-personal-services,Managers in customer and personal services,Sales and service occupations,6,0,Management,70720,34.0,20.0,62.93
+62010,retail-sales-supervisors,Retail sales supervisors,Sales and service occupations,6,2,College diploma or apprenticeship,45760,22.0,16.55,36.06
+62020,food-service-supervisors,Food service supervisors,Sales and service occupations,6,2,College diploma or apprenticeship,39520,19.0,15.75,27.69
+62021,executive-housekeepers,Executive housekeepers,Sales and service occupations,6,2,College diploma or apprenticeship,44990,21.63,17.0,28.0
+62022,accommodation-travel-tourism-and-related-services-supervisors,"Accommodation, travel, tourism and related services supervisors",Sales and service occupations,6,2,College diploma or apprenticeship,52000,25.0,17.5,38.94
+62023,customer-and-information-services-supervisors,Customer and information services supervisors,Sales and service occupations,6,2,College diploma or apprenticeship,64209,30.87,19.58,43.27
+62024,cleaning-supervisors,Cleaning supervisors,Sales and service occupations,6,2,College diploma or apprenticeship,52000,25.0,17.5,41.0
+62029,other-services-supervisors,Other services supervisors,Sales and service occupations,6,2,College diploma or apprenticeship,48048,23.1,17.0,36.41
+62100,technical-sales-specialists-wholesale-trade,Technical sales specialists - wholesale trade,Sales and service occupations,6,2,College diploma or apprenticeship,77105,37.07,20.0,66.11
+62101,retail-and-wholesale-buyers,Retail and wholesale buyers,Sales and service occupations,6,2,College diploma or apprenticeship,62400,30.0,19.23,48.08
+62200,chefs,Chefs,Sales and service occupations,6,2,College diploma or apprenticeship,47840,23.0,16.03,32.69
+62201,funeral-directors-and-embalmers,Funeral directors and embalmers,Sales and service occupations,6,2,College diploma or apprenticeship,65000,31.25,18.0,50.48
+62202,jewellers-jewellery-and-watch-repairers-and-related-occupations,"Jewellers, jewellery and watch repairers and related occupations",Sales and service occupations,6,2,College diploma or apprenticeship,46696,22.45,16.09,35.86
+63100,insurance-agents-and-brokers,Insurance agents and brokers,Sales and service occupations,6,3,Secondary school or occupation-specific training,62400,30.0,21.31,51.28
+63101,real-estate-agents-and-salespersons,Real estate agents and salespersons,Sales and service occupations,6,3,Secondary school or occupation-specific training,58400,28.08,15.8,85.58
+63102,financial-sales-representatives,Financial sales representatives,Sales and service occupations,6,3,Secondary school or occupation-specific training,66310,31.88,21.0,53.85
+63200,cooks,Cooks,Sales and service occupations,6,3,Secondary school or occupation-specific training,37440,18.0,15.0,25.0
+63201,butchers-retail-and-wholesale,Butchers - retail and wholesale,Sales and service occupations,6,3,Secondary school or occupation-specific training,41600,20.0,15.25,28.0
+63202,bakers,Bakers,Sales and service occupations,6,3,Secondary school or occupation-specific training,36400,17.5,15.0,24.81
+63210,hairstylists-and-barbers,Hairstylists and barbers,Sales and service occupations,6,3,Secondary school or occupation-specific training,41350,19.88,15.0,30.0
+63211,estheticians-electrologists-and-related-occupations,"Estheticians, electrologists and related occupations",Sales and service occupations,6,3,Secondary school or occupation-specific training,41600,20.0,15.0,30.0
+63220,shoe-repairers-and-shoemakers,Shoe repairers and shoemakers,Sales and service occupations,6,3,Secondary school or occupation-specific training,48568,23.35,16.69,35.57
+63221,upholsterers,Upholsterers,Sales and service occupations,6,3,Secondary school or occupation-specific training,46716,22.46,17.99,31.0
+64100,retail-salespersons-and-visual-merchandisers,Retail salespersons and visual merchandisers,Sales and service occupations,6,4,On-the-job training,36004,17.31,15.0,28.85
+64101,sales-and-account-representatives-wholesale-trade-non-technical,Sales and account representatives - wholesale trade (non-technical),Sales and service occupations,6,4,On-the-job training,65520,31.5,19.23,56.23
+64200,tailors-dressmakers-furriers-and-milliners,"Tailors, dressmakers, furriers and milliners",Sales and service occupations,6,4,On-the-job training,39520,19.0,15.5,26.0
+64201,image-social-and-other-personal-consultants,"Image, social and other personal consultants",Sales and service occupations,6,4,On-the-job training,55806,26.83,16.19,43.01
+64300,matres-dhtel-and-hostshostesses,Maîtres d'hôtel and hosts/hostesses,Sales and service occupations,6,4,On-the-job training,36566,17.58,15.0,26.0
+64301,bartenders,Bartenders,Sales and service occupations,6,4,On-the-job training,41600,20.0,15.0,30.0
+64310,travel-counsellors,Travel counsellors,Sales and service occupations,6,4,On-the-job training,49920,24.0,17.5,35.0
+64311,pursers-and-flight-attendants,Pursers and flight attendants,Sales and service occupations,6,4,On-the-job training,65000,31.25,22.55,60.0
+64312,airline-ticket-and-service-agents,Airline ticket and service agents,Sales and service occupations,6,4,On-the-job training,43680,21.0,17.0,30.0
+64313,ground-and-water-transport-ticket-agents-cargo-service-representatives-and-relat,"Ground and water transport ticket agents, cargo service representatives and related clerks",Sales and service occupations,6,4,On-the-job training,44096,21.2,16.5,30.55
+64314,hotel-front-desk-clerks,Hotel front desk clerks,Sales and service occupations,6,4,On-the-job training,39520,19.0,15.5,26.5
+64320,tour-and-travel-guides,Tour and travel guides,Sales and service occupations,6,4,On-the-job training,41600,20.0,16.25,27.0
+64321,casino-workers,Casino workers,Sales and service occupations,6,4,On-the-job training,47840,23.0,17.0,32.0
+64322,outdoor-sport-and-recreational-guides,Outdoor sport and recreational guides,Sales and service occupations,6,4,On-the-job training,43451,20.89,17.0,30.0
+64400,customer-services-representatives-financial-institutions,Customer services representatives - financial institutions,Sales and service occupations,6,4,On-the-job training,46800,22.5,18.0,30.67
+64401,postal-services-representatives,Postal services representatives,Sales and service occupations,6,4,On-the-job training,41912,20.15,15.25,30.0
+64409,other-customer-and-information-services-representatives,Other customer and information services representatives,Sales and service occupations,6,4,On-the-job training,45760,22.0,16.0,33.14
+64410,security-guards-and-related-security-service-occupations,Security guards and related security service occupations,Sales and service occupations,6,4,On-the-job training,43680,21.0,16.55,31.45
+65100,cashiers,Cashiers,Sales and service occupations,6,5,Short work demonstration,33280,16.0,15.0,19.02
+65101,service-station-attendants,Service station attendants,Sales and service occupations,6,5,Short work demonstration,33280,16.0,15.0,21.0
+65102,store-shelf-stockers-clerks-and-order-fillers,"Store shelf stockers, clerks and order fillers",Sales and service occupations,6,5,Short work demonstration,34424,16.55,15.0,22.0
+65109,other-sales-related-occupations,Other sales related occupations,Sales and service occupations,6,5,Short work demonstration,39520,19.0,15.25,41.03
+65200,food-and-beverage-servers,Food and beverage servers,Sales and service occupations,6,5,Short work demonstration,38480,18.5,15.0,30.0
+65201,food-counter-attendants-kitchen-helpers-and-related-support-occupations,"Food counter attendants, kitchen helpers and related support occupations",Sales and service occupations,6,5,Short work demonstration,34424,16.55,15.0,21.5
+65202,meat-cutters-and-fishmongers-retail-and-wholesale,Meat cutters and fishmongers – retail and wholesale,Sales and service occupations,6,5,Short work demonstration,40560,19.5,15.5,28.0
+65210,support-occupations-in-accommodation-travel-and-facilities-set-up-services,"Support occupations in accommodation, travel and facilities set-up services",Sales and service occupations,6,5,Short work demonstration,43264,20.8,16.07,29.33
+65211,operators-and-attendants-in-amusement-recreation-and-sport,"Operators and attendants in amusement, recreation and sport",Sales and service occupations,6,5,Short work demonstration,36400,17.5,15.0,27.0
+65220,pet-groomers-and-animal-care-workers,Pet groomers and animal care workers,Sales and service occupations,6,5,Short work demonstration,37440,18.0,15.0,25.5
+65229,other-support-occupations-in-personal-services,Other support occupations in personal services,Sales and service occupations,6,5,Short work demonstration,32867,15.8,15.8,45.19
+65310,light-duty-cleaners,Light duty cleaners,Sales and service occupations,6,5,Short work demonstration,41059,19.74,15.5,25.0
+65311,specialized-cleaners,Specialized cleaners,Sales and service occupations,6,5,Short work demonstration,39998,19.23,15.5,27.0
+65312,janitors-caretakers-and-heavy-duty-cleaners,"Janitors, caretakers and heavy-duty cleaners",Sales and service occupations,6,5,Short work demonstration,44241,21.27,16.0,28.72
+65320,dry-cleaning-laundry-and-related-occupations,"Dry cleaning, laundry and related occupations",Sales and service occupations,6,5,Short work demonstration,40560,19.5,15.75,24.0
+65329,other-service-support-occupations,Other service support occupations,Sales and service occupations,6,5,Short work demonstration,36400,17.5,15.0,24.73
+70010,construction-managers,Construction managers,"Trades, transport and equipment operators and related occupations",7,0,Management,101337,48.72,31.25,83.76
+70011,home-building-and-renovation-managers,Home building and renovation managers,"Trades, transport and equipment operators and related occupations",7,0,Management,46800,22.5,15.8,51.44
+70012,facility-operation-and-maintenance-managers,Facility operation and maintenance managers,"Trades, transport and equipment operators and related occupations",7,0,Management,94016,45.2,25.96,70.67
+70020,managers-in-transportation,Managers in transportation,"Trades, transport and equipment operators and related occupations",7,0,Management,109990,52.88,31.25,79.93
+70021,postal-and-courier-services-managers,Postal and courier services managers,"Trades, transport and equipment operators and related occupations",7,0,Management,91998,44.23,29.0,75.0
+72010,contractors-and-supervisors-machining-metal-forming-shaping-and-erecting-trades-,"Contractors and supervisors, machining, metal forming, shaping and erecting trades and related occupations","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,83200,40.0,28.1,55.0
+72011,contractors-and-supervisors-electrical-trades-and-telecommunications-occupations,"Contractors and supervisors, electrical trades and telecommunications occupations","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,93163,44.79,30.0,64.0
+72012,contractors-and-supervisors-pipefitting-trades,"Contractors and supervisors, pipefitting trades","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,100048,48.1,30.0,61.52
+72013,contractors-and-supervisors-carpentry-trades,"Contractors and supervisors, carpentry trades","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,79040,38.0,25.0,51.17
+72014,contractors-and-supervisors-other-construction-trades-installers-repairers-and-s,"Contractors and supervisors, other construction trades, installers, repairers and servicers","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,78000,37.5,26.0,50.0
+72020,contractors-and-supervisors-mechanic-trades,"Contractors and supervisors, mechanic trades","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,83200,40.0,25.0,60.0
+72021,contractors-and-supervisors-heavy-equipment-operator-crews,"Contractors and supervisors, heavy equipment operator crews","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,79996,38.46,26.92,55.0
+72022,supervisors-printing-and-related-occupations,"Supervisors, printing and related occupations","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,62400,30.0,23.08,41.35
+72023,supervisors-railway-transport-operations,"Supervisors, railway transport operations","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,83200,40.0,20.19,52.88
+72024,supervisors-motor-transport-and-other-ground-transit-operators,"Supervisors, motor transport and other ground transit operators","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,68640,33.0,21.0,52.5
+72025,supervisors-mail-and-message-distribution-occupations,"Supervisors, mail and message distribution occupations","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,66268,31.86,21.0,40.38
+72100,machinists-and-machining-and-tooling-inspectors,Machinists and machining and tooling inspectors,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,62400,30.0,21.0,41.5
+72101,tool-and-die-makers,Tool and die makers,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,70720,34.0,22.5,44.65
+72102,sheet-metal-workers,Sheet metal workers,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,70865,34.07,22.7,45.95
+72103,boilermakers,Boilermakers,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,101920,49.0,37.66,54.57
+72104,structural-metal-and-platework-fabricators-and-fitters,Structural metal and platework fabricators and fitters,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,60320,29.0,21.0,43.3
+72105,ironworkers,Ironworkers,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,89440,43.0,29.0,49.8
+72106,welders-and-related-machine-operators,Welders and related machine operators,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,62400,30.0,22.0,47.0
+72200,electricians-except-industrial-and-power-system,Electricians (except industrial and power system),"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,72800,35.0,20.0,48.0
+72201,industrial-electricians,Industrial electricians,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,87360,42.0,28.0,54.0
+72202,power-system-electricians,Power system electricians,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,96824,46.55,36.26,60.0
+72203,electrical-power-line-and-cable-workers,Electrical power line and cable workers,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,95680,46.0,28.4,62.0
+72204,telecommunications-line-and-cable-installers-and-repairers,Telecommunications line and cable installers and repairers,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,74880,36.0,23.0,43.0
+72205,telecommunications-equipment-installation-and-cable-television-service-technicia,Telecommunications equipment installation and cable television service technicians,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,70304,33.8,21.63,42.86
+72300,plumbers,Plumbers,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,70720,34.0,21.0,46.0
+72301,steamfitters-pipefitters-and-sprinkler-system-installers,"Steamfitters, pipefitters and sprinkler system installers","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,91291,43.89,27.0,55.59
+72302,gas-fitters,Gas fitters,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,83200,40.0,26.44,59.62
+72310,carpenters,Carpenters,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,66809,32.12,22.0,44.23
+72311,cabinetmakers,Cabinetmakers,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,49920,24.0,19.0,31.0
+72320,bricklayers,Bricklayers,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,83200,40.0,25.78,48.78
+72321,insulators,Insulators,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,78228,37.61,23.0,48.65
+72400,construction-millwrights-and-industrial-mechanics,Construction millwrights and industrial mechanics,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,76960,37.0,24.0,52.0
+72401,heavy-duty-equipment-mechanics,Heavy-duty equipment mechanics,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,77209,37.12,23.87,55.0
+72402,heating-refrigeration-and-air-conditioning-mechanics,"Heating, refrigeration and air conditioning mechanics","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,78000,37.5,22.0,56.0
+72403,railway-carmenwomen,Railway carmen/women,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,87360,42.0,32.0,47.0
+72404,aircraft-mechanics-and-aircraft-inspectors,Aircraft mechanics and aircraft inspectors,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,81120,39.0,24.48,52.88
+72405,machine-fitters,Machine fitters,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,73611,35.39,23.58,48.23
+72406,elevator-constructors-and-mechanics,Elevator constructors and mechanics,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,93600,45.0,22.0,68.0
+72410,automotive-service-technicians-truck-and-bus-mechanics-and-mechanical-repairers,"Automotive service technicians, truck and bus mechanics and mechanical repairers","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,62171,29.89,19.0,43.27
+72411,auto-body-collision-refinishing-and-glass-technicians-and-damage-repair-estimato,"Auto body collision, refinishing and glass technicians and damage repair estimators","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,56160,27.0,18.5,40.0
+72420,oil-and-solid-fuel-heating-mechanics,Oil and solid fuel heating mechanics,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,56160,27.0,20.0,40.0
+72421,appliance-servicers-and-repairers,Appliance servicers and repairers,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,58510,28.13,20.0,41.59
+72422,electrical-mechanics,Electrical mechanics,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,64480,31.0,24.0,43.0
+72423,motorcycle-all-terrain-vehicle-and-other-related-mechanics,"Motorcycle, all-terrain vehicle and other related mechanics","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,62400,30.0,20.0,40.0
+72429,other-small-engine-and-small-equipment-repairers,Other small engine and small equipment repairers,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,49920,24.0,15.3,32.0
+72500,crane-operators,Crane operators,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,88961,42.77,26.5,52.19
+72501,water-well-drillers,Water well drillers,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,62400,30.0,21.6,41.92
+72600,air-pilots-flight-engineers-and-flying-instructors,"Air pilots, flight engineers and flying instructors","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,108160,52.0,24.04,106.0
+72601,air-traffic-controllers-and-related-occupations,Air traffic controllers and related occupations,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,114150,54.88,25.25,106.19
+72602,deck-officers-water-transport,"Deck officers, water transport","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,86028,41.36,24.33,72.12
+72603,engineer-officers-water-transport,"Engineer officers, water transport","Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,76960,37.0,26.78,61.54
+72604,railway-traffic-controllers-and-marine-traffic-regulators,Railway traffic controllers and marine traffic regulators,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,85280,41.0,31.0,54.0
+72999,other-technical-trades-and-related-occupations,Other technical trades and related occupations,"Trades, transport and equipment operators and related occupations",7,2,College diploma or apprenticeship,72217,34.72,21.63,47.85
+73100,concrete-finishers,Concrete finishers,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,70720,34.0,24.5,43.47
+73101,tilesetters,Tilesetters,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,72300,34.76,24.04,44.0
+73102,plasterers-drywall-installers-and-finishers-and-lathers,"Plasterers, drywall installers and finishers and lathers","Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,68640,33.0,23.0,43.75
+73110,roofers-and-shinglers,Roofers and shinglers,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,64417,30.97,22.0,44.24
+73111,glaziers,Glaziers,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,62732,30.16,22.0,43.09
+73112,painters-and-decorators-except-interior-decorators,Painters and decorators (except interior decorators),"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,58240,28.0,20.0,40.99
+73113,floor-covering-installers,Floor covering installers,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,54080,26.0,17.0,43.0
+73200,residential-and-commercial-installers-and-servicers,Residential and commercial installers and servicers,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,54080,26.0,18.65,40.0
+73201,general-building-maintenance-workers-and-building-superintendents,General building maintenance workers and building superintendents,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,52000,25.0,16.55,38.46
+73202,pest-controllers-and-fumigators,Pest controllers and fumigators,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,53996,25.96,19.23,37.5
+73209,other-repairers-and-servicers,Other repairers and servicers,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,52000,25.0,17.25,38.46
+73300,transport-truck-drivers,Transport truck drivers,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,54953,26.42,19.45,37.0
+73301,bus-drivers-subway-operators-and-other-transit-operators,"Bus drivers, subway operators and other transit operators","Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,52000,25.0,17.18,37.68
+73310,railway-and-yard-locomotive-engineers,Railway and yard locomotive engineers,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,104000,50.0,33.0,68.85
+73311,railway-conductors-and-brakemenwomen,Railway conductors and brakemen/women,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,90001,43.27,24.31,56.25
+73400,heavy-equipment-operators,Heavy equipment operators,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,67600,32.5,24.0,45.0
+73401,printing-press-operators,Printing press operators,"Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,52000,25.0,18.27,35.0
+73402,drillers-and-blasters-surface-mining-quarrying-and-construction,"Drillers and blasters - surface mining, quarrying and construction","Trades, transport and equipment operators and related occupations",7,3,Secondary school or occupation-specific training,78000,37.5,27.0,49.0
+74100,mail-and-parcel-sorters-and-related-occupations,Mail and parcel sorters and related occupations,"Trades, transport and equipment operators and related occupations",7,4,On-the-job training,54080,26.0,18.56,30.66
+74101,letter-carriers,Letter carriers,"Trades, transport and equipment operators and related occupations",7,4,On-the-job training,60008,28.85,23.0,33.65
+74102,couriers-and-messengers,Couriers and messengers,"Trades, transport and equipment operators and related occupations",7,4,On-the-job training,47840,23.0,17.5,35.0
+74200,railway-yard-and-track-maintenance-workers,Railway yard and track maintenance workers,"Trades, transport and equipment operators and related occupations",7,4,On-the-job training,74880,36.0,26.0,42.0
+74201,water-transport-deck-and-engine-room-crew,Water transport deck and engine room crew,"Trades, transport and equipment operators and related occupations",7,4,On-the-job training,58240,28.0,17.75,43.0
+74202,air-transport-ramp-attendants,Air transport ramp attendants,"Trades, transport and equipment operators and related occupations",7,4,On-the-job training,48588,23.36,18.0,32.23
+74203,automotive-and-heavy-truck-and-equipment-parts-installers-and-servicers,Automotive and heavy truck and equipment parts installers and servicers,"Trades, transport and equipment operators and related occupations",7,4,On-the-job training,41600,20.0,16.55,30.0
+74204,utility-maintenance-workers,Utility maintenance workers,"Trades, transport and equipment operators and related occupations",7,4,On-the-job training,70720,34.0,23.0,48.08
+74205,public-works-maintenance-equipment-operators-and-related-workers,Public works maintenance equipment operators and related workers,"Trades, transport and equipment operators and related occupations",7,4,On-the-job training,59280,28.5,22.0,35.33
+75100,longshore-workers,Longshore workers,"Trades, transport and equipment operators and related occupations",7,5,Short work demonstration,68244,32.81,19.18,51.14
+75101,material-handlers,Material handlers,"Trades, transport and equipment operators and related occupations",7,5,Short work demonstration,45760,22.0,16.55,30.29
+75110,construction-trades-helpers-and-labourers,Construction trades helpers and labourers,"Trades, transport and equipment operators and related occupations",7,5,Short work demonstration,52000,25.0,18.25,40.0
+75119,other-trades-helpers-and-labourers,Other trades helpers and labourers,"Trades, transport and equipment operators and related occupations",7,5,Short work demonstration,49920,24.0,17.75,36.4
+75200,taxi-and-limousine-drivers-and-chauffeurs,Taxi and limousine drivers and chauffeurs,"Trades, transport and equipment operators and related occupations",7,5,Short work demonstration,39520,19.0,15.0,30.0
+75201,delivery-service-drivers-and-door-to-door-distributors,Delivery service drivers and door-to-door distributors,"Trades, transport and equipment operators and related occupations",7,5,Short work demonstration,41600,20.0,15.0,29.35
+75210,boat-and-cable-ferry-operators-and-related-occupations,Boat and cable ferry operators and related occupations,"Trades, transport and equipment operators and related occupations",7,5,Short work demonstration,57491,27.64,20.0,47.5
+75211,railway-and-motor-transport-labourers,Railway and motor transport labourers,"Trades, transport and equipment operators and related occupations",7,5,Short work demonstration,45760,22.0,17.0,30.0
+75212,public-works-and-maintenance-labourers,Public works and maintenance labourers,"Trades, transport and equipment operators and related occupations",7,5,Short work demonstration,56056,26.95,18.0,34.7
+80010,managers-in-natural-resources-production-and-fishing,Managers in natural resources production and fishing,"Natural resources, agriculture and related production occupations",8,0,Management,150009,72.12,43.27,134.62
+80020,managers-in-agriculture,Managers in agriculture,"Natural resources, agriculture and related production occupations",8,0,Management,62400,30.0,16.25,57.69
+80021,managers-in-horticulture,Managers in horticulture,"Natural resources, agriculture and related production occupations",8,0,Management,45344,21.8,17.0,33.54
+80022,managers-in-aquaculture,Managers in aquaculture,"Natural resources, agriculture and related production occupations",8,0,Management,66560,32.0,23.6,72.12
+82010,supervisors-logging-and-forestry,"Supervisors, logging and forestry","Natural resources, agriculture and related production occupations",8,2,College diploma or apprenticeship,72488,34.85,23.7,50.48
+82020,supervisors-mining-and-quarrying,"Supervisors, mining and quarrying","Natural resources, agriculture and related production occupations",8,2,College diploma or apprenticeship,105289,50.62,30.0,74.79
+82021,contractors-and-supervisors-oil-and-gas-drilling-and-services,"Contractors and supervisors, oil and gas drilling and services","Natural resources, agriculture and related production occupations",8,2,College diploma or apprenticeship,104000,50.0,31.5,79.33
+82030,agricultural-service-contractors-and-farm-supervisors,Agricultural service contractors and farm supervisors,"Natural resources, agriculture and related production occupations",8,2,College diploma or apprenticeship,50003,24.04,17.0,38.46
+82031,contractors-and-supervisors-landscaping-grounds-maintenance-and-horticulture-ser,"Contractors and supervisors, landscaping, grounds maintenance and horticulture services","Natural resources, agriculture and related production occupations",8,2,College diploma or apprenticeship,62004,29.81,21.0,41.0
+83100,underground-production-and-development-miners,Underground production and development miners,"Natural resources, agriculture and related production occupations",8,3,Secondary school or occupation-specific training,87360,42.0,28.0,56.0
+83101,oil-and-gas-well-drillers-servicers-testers-and-related-workers,"Oil and gas well drillers, servicers, testers and related workers","Natural resources, agriculture and related production occupations",8,3,Secondary school or occupation-specific training,98009,47.12,26.37,70.0
+83110,logging-machinery-operators,Logging machinery operators,"Natural resources, agriculture and related production occupations",8,3,Secondary school or occupation-specific training,66560,32.0,22.0,40.78
+83120,fishing-masters-and-officers,Fishing masters and officers,"Natural resources, agriculture and related production occupations",8,3,Secondary school or occupation-specific training,83740,40.26,20.0,100.0
+83121,fishermenwomen,Fishermen/women,"Natural resources, agriculture and related production occupations",8,3,Secondary school or occupation-specific training,57761,27.77,18.1,60.0
+84100,underground-mine-service-and-support-workers,Underground mine service and support workers,"Natural resources, agriculture and related production occupations",8,4,On-the-job training,79040,38.0,23.75,52.0
+84101,oil-and-gas-well-drilling-and-related-workers-and-services-operators,Oil and gas well drilling and related workers and services operators,"Natural resources, agriculture and related production occupations",8,4,On-the-job training,83200,40.0,25.0,47.3
+84110,chain-saw-and-skidder-operators,Chain saw and skidder operators,"Natural resources, agriculture and related production occupations",8,4,On-the-job training,62400,30.0,20.0,40.0
+84111,silviculture-and-forestry-workers,Silviculture and forestry workers,"Natural resources, agriculture and related production occupations",8,4,On-the-job training,52000,25.0,19.75,34.0
+84120,specialized-livestock-workers-and-farm-machinery-operators,Specialized livestock workers and farm machinery operators,"Natural resources, agriculture and related production occupations",8,4,On-the-job training,45760,22.0,15.0,32.0
+84121,fishing-vessel-deckhands,Fishing vessel deckhands,"Natural resources, agriculture and related production occupations",8,4,On-the-job training,52000,25.0,18.0,50.0
+85100,livestock-labourers,Livestock labourers,"Natural resources, agriculture and related production occupations",8,5,Short work demonstration,41600,20.0,15.0,28.0
+85101,harvesting-labourers,Harvesting labourers,"Natural resources, agriculture and related production occupations",8,5,Short work demonstration,37440,18.0,16.0,25.0
+85102,aquaculture-and-marine-harvest-labourers,Aquaculture and marine harvest labourers,"Natural resources, agriculture and related production occupations",8,5,Short work demonstration,45760,22.0,17.0,36.06
+85103,nursery-and-greenhouse-labourers,Nursery and greenhouse labourers,"Natural resources, agriculture and related production occupations",8,5,Short work demonstration,40560,19.5,15.25,29.0
+85104,trappers-and-hunters,Trappers and hunters,"Natural resources, agriculture and related production occupations",8,5,Short work demonstration,48318,23.23,16.12,35.85
+85110,mine-labourers,Mine labourers,"Natural resources, agriculture and related production occupations",8,5,Short work demonstration,67600,32.5,21.0,48.65
+85111,oil-and-gas-drilling-servicing-and-related-labourers,"Oil and gas drilling, servicing and related labourers","Natural resources, agriculture and related production occupations",8,5,Short work demonstration,64480,31.0,21.52,39.5
+85120,logging-and-forestry-labourers,Logging and forestry labourers,"Natural resources, agriculture and related production occupations",8,5,Short work demonstration,59716,28.71,19.37,47.5
+85121,landscaping-and-grounds-maintenance-labourers,Landscaping and grounds maintenance labourers,"Natural resources, agriculture and related production occupations",8,5,Short work demonstration,43160,20.75,17.0,28.0
+90010,manufacturing-managers,Manufacturing managers,Occupations in manufacturing and utilities,9,0,Management,109865,52.82,33.33,93.33
+90011,utilities-managers,Utilities managers,Occupations in manufacturing and utilities,9,0,Management,126880,61.0,40.38,93.75
+92010,supervisors-mineral-and-metal-processing,"Supervisors, mineral and metal processing",Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,74880,36.0,25.0,56.25
+92011,supervisors-petroleum-gas-and-chemical-processing-and-utilities,"Supervisors, petroleum, gas and chemical processing and utilities",Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,89440,43.0,25.0,73.0
+92012,supervisors-food-and-beverage-processing,"Supervisors, food and beverage processing",Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,57200,27.5,20.5,45.41
+92013,supervisors-plastic-and-rubber-products-manufacturing,"Supervisors, plastic and rubber products manufacturing",Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,65000,31.25,23.0,45.0
+92014,supervisors-forest-products-processing,"Supervisors, forest products processing",Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,75004,36.06,25.14,57.69
+92015,supervisors-textile-fabric-fur-and-leather-products-processing-and-manufacturing,"Supervisors, textile, fabric, fur and leather products processing and manufacturing",Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,56160,27.0,17.0,44.71
+92020,supervisors-motor-vehicle-assembling,"Supervisors, motor vehicle assembling",Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,72009,34.62,23.0,50.48
+92021,supervisors-electronics-and-electrical-products-manufacturing,"Supervisors, electronics and electrical products manufacturing",Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,69992,33.65,25.0,48.27
+92022,supervisors-furniture-and-fixtures-manufacturing,"Supervisors, furniture and fixtures manufacturing",Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,59280,28.5,22.33,36.54
+92023,supervisors-other-mechanical-and-metal-products-manufacturing,"Supervisors, other mechanical and metal products manufacturing",Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,74880,36.0,26.92,50.0
+92024,supervisors-other-products-manufacturing-and-assembly,"Supervisors, other products manufacturing and assembly",Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,64001,30.77,22.0,44.71
+92100,power-engineers-and-power-systems-operators,Power engineers and power systems operators,Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,102398,49.23,30.0,75.55
+92101,water-and-waste-treatment-plant-operators,Water and waste treatment plant operators,Occupations in manufacturing and utilities,9,2,College diploma or apprenticeship,75004,36.06,25.0,48.0
+93100,central-control-and-process-operators-mineral-and-metal-processing,"Central control and process operators, mineral and metal processing",Occupations in manufacturing and utilities,9,3,Secondary school or occupation-specific training,92560,44.5,32.0,53.83
+93101,central-control-and-process-operators-petroleum-gas-and-chemical-processing,"Central control and process operators, petroleum, gas and chemical processing",Occupations in manufacturing and utilities,9,3,Secondary school or occupation-specific training,104000,50.0,28.0,67.64
+93102,pulping-papermaking-and-coating-control-operators,"Pulping, papermaking and coating control operators",Occupations in manufacturing and utilities,9,3,Secondary school or occupation-specific training,83200,40.0,35.0,58.0
+93200,aircraft-assemblers-and-aircraft-assembly-inspectors,Aircraft assemblers and aircraft assembly inspectors,Occupations in manufacturing and utilities,9,3,Secondary school or occupation-specific training,70720,34.0,20.0,47.0
+94100,machine-operators-mineral-and-metal-processing,"Machine operators, mineral and metal processing",Occupations in manufacturing and utilities,9,4,On-the-job training,72800,35.0,22.0,50.0
+94101,foundry-workers,Foundry workers,Occupations in manufacturing and utilities,9,4,On-the-job training,52000,25.0,18.5,34.45
+94102,glass-forming-and-finishing-machine-operators-and-glass-cutters,Glass forming and finishing machine operators and glass cutters,Occupations in manufacturing and utilities,9,4,On-the-job training,47299,22.74,18.0,29.4
+94103,concrete-clay-and-stone-forming-operators,"Concrete, clay and stone forming operators",Occupations in manufacturing and utilities,9,4,On-the-job training,54080,26.0,20.0,34.91
+94104,inspectors-and-testers-mineral-and-metal-processing,"Inspectors and testers, mineral and metal processing",Occupations in manufacturing and utilities,9,4,On-the-job training,54579,26.24,19.5,40.12
+94105,metalworking-and-forging-machine-operators,Metalworking and forging machine operators,Occupations in manufacturing and utilities,9,4,On-the-job training,52000,25.0,19.0,34.68
+94106,machining-tool-operators,Machining tool operators,Occupations in manufacturing and utilities,9,4,On-the-job training,52000,25.0,17.5,33.08
+94107,machine-operators-of-other-metal-products,Machine operators of other metal products,Occupations in manufacturing and utilities,9,4,On-the-job training,47112,22.65,18.0,34.0
+94110,chemical-plant-machine-operators,Chemical plant machine operators,Occupations in manufacturing and utilities,9,4,On-the-job training,52998,25.48,18.44,40.0
+94111,plastics-processing-machine-operators,Plastics processing machine operators,Occupations in manufacturing and utilities,9,4,On-the-job training,47840,23.0,17.5,30.0
+94112,rubber-processing-machine-operators-and-related-workers,Rubber processing machine operators and related workers,Occupations in manufacturing and utilities,9,4,On-the-job training,61068,29.36,20.0,38.76
+94120,sawmill-machine-operators,Sawmill machine operators,Occupations in manufacturing and utilities,9,4,On-the-job training,56888,27.35,19.0,37.0
+94121,pulp-mill-papermaking-and-finishing-machine-operators,"Pulp mill, papermaking and finishing machine operators",Occupations in manufacturing and utilities,9,4,On-the-job training,66580,32.01,22.0,45.5
+94122,paper-converting-machine-operators,Paper converting machine operators,Occupations in manufacturing and utilities,9,4,On-the-job training,58240,28.0,18.0,34.0
+94123,lumber-graders-and-other-wood-processing-inspectors-and-graders,Lumber graders and other wood processing inspectors and graders,Occupations in manufacturing and utilities,9,4,On-the-job training,57200,27.5,20.0,38.0
+94124,woodworking-machine-operators,Woodworking machine operators,Occupations in manufacturing and utilities,9,4,On-the-job training,45760,22.0,18.0,32.0
+94129,other-wood-processing-machine-operators,Other wood processing machine operators,Occupations in manufacturing and utilities,9,4,On-the-job training,53497,25.72,17.5,37.0
+94130,textile-fibre-and-yarn-hide-and-pelt-processing-machine-operators-and-workers,"Textile fibre and yarn, hide and pelt processing machine operators and workers",Occupations in manufacturing and utilities,9,4,On-the-job training,47008,22.6,17.0,28.5
+94131,weavers-knitters-and-other-fabric-making-occupations,"Weavers, knitters and other fabric making occupations",Occupations in manufacturing and utilities,9,4,On-the-job training,40060,19.26,16.48,25.0
+94132,industrial-sewing-machine-operators,Industrial sewing machine operators,Occupations in manufacturing and utilities,9,4,On-the-job training,37440,18.0,15.3,23.0
+94133,inspectors-and-graders-textile-fabric-fur-and-leather-products-manufacturing,"Inspectors and graders, textile, fabric, fur and leather products manufacturing",Occupations in manufacturing and utilities,9,4,On-the-job training,36400,17.5,15.5,24.0
+94140,process-control-and-machine-operators-food-and-beverage-processing,"Process control and machine operators, food and beverage processing",Occupations in manufacturing and utilities,9,4,On-the-job training,46800,22.5,17.2,32.0
+94141,industrial-butchers-and-meat-cutters-poultry-preparers-and-related-workers,"Industrial butchers and meat cutters, poultry preparers and related workers",Occupations in manufacturing and utilities,9,4,On-the-job training,47840,23.0,18.0,26.15
+94142,fish-and-seafood-plant-workers,Fish and seafood plant workers,Occupations in manufacturing and utilities,9,4,On-the-job training,35880,17.25,15.5,20.0
+94143,testers-and-graders-food-and-beverage-processing,"Testers and graders, food and beverage processing",Occupations in manufacturing and utilities,9,4,On-the-job training,52000,25.0,17.0,34.0
+94150,plateless-printing-equipment-operators,Plateless printing equipment operators,Occupations in manufacturing and utilities,9,4,On-the-job training,43680,21.0,16.55,28.75
+94151,camera-platemaking-and-other-prepress-occupations,"Camera, platemaking and other prepress occupations",Occupations in manufacturing and utilities,9,4,On-the-job training,53768,25.85,20.03,38.09
+94152,binding-and-finishing-machine-operators,Binding and finishing machine operators,Occupations in manufacturing and utilities,9,4,On-the-job training,45760,22.0,18.26,31.48
+94153,photographic-and-film-processors,Photographic and film processors,Occupations in manufacturing and utilities,9,4,On-the-job training,41600,20.0,16.2,30.78
+94200,motor-vehicle-assemblers-inspectors-and-testers,"Motor vehicle assemblers, inspectors and testers",Occupations in manufacturing and utilities,9,4,On-the-job training,67579,32.49,21.89,42.35
+94201,electronics-assemblers-fabricators-inspectors-and-testers,"Electronics assemblers, fabricators, inspectors and testers",Occupations in manufacturing and utilities,9,4,On-the-job training,43576,20.95,17.0,29.47
+94202,assemblers-and-inspectors-electrical-appliance-apparatus-and-equipment-manufactu,"Assemblers and inspectors, electrical appliance, apparatus and equipment manufacturing",Occupations in manufacturing and utilities,9,4,On-the-job training,46404,22.31,16.0,36.25
+94203,assemblers-fabricators-and-inspectors-industrial-electrical-motors-and-transform,"Assemblers, fabricators and inspectors, industrial electrical motors and transformers",Occupations in manufacturing and utilities,9,4,On-the-job training,47216,22.7,18.0,38.0
+94204,mechanical-assemblers-and-inspectors,Mechanical assemblers and inspectors,Occupations in manufacturing and utilities,9,4,On-the-job training,54080,26.0,20.0,37.99
+94205,machine-operators-and-inspectors-electrical-apparatus-manufacturing,"Machine operators and inspectors, electrical apparatus manufacturing",Occupations in manufacturing and utilities,9,4,On-the-job training,45760,22.0,17.5,29.89
+94210,furniture-and-fixture-assemblers-finishers-refinishers-and-inspectors,"Furniture and fixture assemblers, finishers, refinishers and inspectors",Occupations in manufacturing and utilities,9,4,On-the-job training,47403,22.79,17.0,30.0
+94211,assemblers-and-inspectors-of-other-wood-products,Assemblers and inspectors of other wood products,Occupations in manufacturing and utilities,9,4,On-the-job training,46196,22.21,17.5,29.0
+94212,plastic-products-assemblers-finishers-and-inspectors,"Plastic products assemblers, finishers and inspectors",Occupations in manufacturing and utilities,9,4,On-the-job training,45572,21.91,17.77,30.0
+94213,industrial-painters-coaters-and-metal-finishing-process-operators,"Industrial painters, coaters and metal finishing process operators",Occupations in manufacturing and utilities,9,4,On-the-job training,51188,24.61,18.0,36.0
+94219,other-products-assemblers-finishers-and-inspectors,"Other products assemblers, finishers and inspectors",Occupations in manufacturing and utilities,9,4,On-the-job training,45822,22.03,17.0,34.0
+95100,labourers-in-mineral-and-metal-processing,Labourers in mineral and metal processing,Occupations in manufacturing and utilities,9,5,Short work demonstration,52936,25.45,19.0,39.48
+95101,labourers-in-metal-fabrication,Labourers in metal fabrication,Occupations in manufacturing and utilities,9,5,Short work demonstration,49920,24.0,18.5,32.5
+95102,labourers-in-chemical-products-processing-and-utilities,Labourers in chemical products processing and utilities,Occupations in manufacturing and utilities,9,5,Short work demonstration,52000,25.0,18.25,38.53
+95103,labourers-in-wood-pulp-and-paper-processing,"Labourers in wood, pulp and paper processing",Occupations in manufacturing and utilities,9,5,Short work demonstration,50190,24.13,18.0,33.95
+95104,labourers-in-rubber-and-plastic-products-manufacturing,Labourers in rubber and plastic products manufacturing,Occupations in manufacturing and utilities,9,5,Short work demonstration,42536,20.45,16.0,28.0
+95105,labourers-in-textile-processing-and-cutting,Labourers in textile processing and cutting,Occupations in manufacturing and utilities,9,5,Short work demonstration,38480,18.5,15.0,24.0
+95106,labourers-in-food-and-beverage-processing,Labourers in food and beverage processing,Occupations in manufacturing and utilities,9,5,Short work demonstration,41600,20.0,16.5,25.67
+95107,labourers-in-fish-and-seafood-processing,Labourers in fish and seafood processing,Occupations in manufacturing and utilities,9,5,Short work demonstration,37440,18.0,16.0,21.4
+95109,other-labourers-in-processing-manufacturing-and-utilities,"Other labourers in processing, manufacturing and utilities",Occupations in manufacturing and utilities,9,5,Short work demonstration,41600,20.0,16.5,25.4

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Exposure of the Canadian Job Market</title>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0a0a0f;
+  --bg2: #111118;
+  --fg: #e0e0e8;
+  --fg2: #78788a;
+  --sidebar-w: 260px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0; left: 0; bottom: 0;
+  width: var(--sidebar-w);
+  background: var(--bg2);
+  border-right: 1px solid rgba(255,255,255,0.05);
+  padding: 20px 18px;
+  z-index: 10;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#sidebar h1 {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+#sidebar .subtitle {
+  font-size: 11px;
+  color: var(--fg2);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+#sidebar .subtitle a { color: var(--fg2); }
+
+.caveat {
+  font-size: 10px;
+  color: var(--fg2);
+  line-height: 1.5;
+  padding: 8px 10px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 6px;
+  border-left: 2px solid rgba(255,255,255,0.08);
+}
+
+.stat-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.stat-section h3 {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg2);
+}
+.stat-big {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--fg2);
+}
+
+.histogram {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 48px;
+}
+.histogram .bar {
+  flex: 1;
+  border-radius: 2px 2px 0 0;
+  min-height: 1px;
+}
+.hist-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: var(--fg2);
+  margin-top: 2px;
+}
+
+.hbar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.hbar-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+.hbar-label {
+  width: 80px;
+  flex-shrink: 0;
+  color: var(--fg2);
+  font-size: 10px;
+  text-align: right;
+}
+.hbar-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.hbar-fill {
+  height: 100%;
+  border-radius: 2px;
+}
+.hbar-val {
+  width: 22px;
+  flex-shrink: 0;
+  font-size: 10px;
+  color: var(--fg);
+  text-align: right;
+}
+
+.gradient-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--fg2);
+}
+.gradient-legend canvas {
+  border-radius: 2px;
+}
+
+#treemap {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  bottom: 0;
+}
+
+#breadcrumb {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  z-index: 15;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: auto;
+  padding: 10px 16px;
+  background: linear-gradient(to bottom, rgba(10,10,15,0.92) 0%, rgba(10,10,15,0) 100%);
+}
+#breadcrumb .crumb {
+  color: var(--fg2);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+#breadcrumb .crumb:hover { color: var(--fg); }
+#breadcrumb .crumb.active {
+  color: var(--fg);
+  cursor: default;
+}
+#breadcrumb .sep {
+  color: rgba(255,255,255,0.2);
+  font-size: 11px;
+}
+
+.treemap-cell {
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  border-radius: 3px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.treemap-cell:hover {
+  opacity: 0.88;
+  border-color: rgba(255,255,255,0.3);
+  z-index: 2;
+}
+.treemap-cell .cell-label {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  text-align: center;
+  pointer-events: none;
+}
+.treemap-cell .cell-title {
+  font-weight: 600;
+  line-height: 1.2;
+}
+.treemap-cell .cell-subtitle {
+  font-size: 12px;
+  opacity: 0.65;
+  margin-top: 3px;
+}
+
+/* ─── Card grid for drill-down ─── */
+#card-grid {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 44px 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 8px;
+  align-content: start;
+}
+#card-grid.hidden { display: none; }
+
+.occ-card {
+  border-radius: 6px;
+  padding: 12px 14px;
+  cursor: default;
+  transition: border-color 0.15s;
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.occ-card:hover {
+  border-color: rgba(255,255,255,0.3);
+}
+.occ-card .card-title {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.occ-card .card-meta {
+  font-size: 11px;
+  opacity: 0.6;
+  display: flex;
+  gap: 8px;
+}
+.occ-card .card-score {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+#tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: rgba(18,18,26,0.95);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 13px;
+  line-height: 1.5;
+  max-width: 380px;
+  opacity: 0;
+  transition: opacity 0.12s;
+  z-index: 20;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+}
+#tooltip.visible { opacity: 1; }
+#tooltip .tt-title {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+#tooltip .tt-exposure {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+#tooltip .tt-stats {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2px 12px;
+  font-size: 12px;
+}
+#tooltip .tt-stats .label { color: var(--fg2); }
+#tooltip .tt-stats .value { color: var(--fg); text-align: right; }
+#tooltip .tt-rationale {
+  font-size: 11px;
+  color: var(--fg2);
+  margin-top: 8px;
+  line-height: 1.4;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 8px;
+}
+</style>
+</head>
+<body>
+
+<div id="sidebar">
+  <div>
+    <h1>AI Exposure of the Canadian Job Market</h1>
+    <div class="subtitle" id="subtitleText">516 occupations scored 0&ndash;10 &middot; click a sector to explore<br>Data from <a href="https://noc.esdc.gc.ca/">NOC/OaSIS</a>, scored by Gemini Flash</div>
+  </div>
+
+  <div class="caveat">
+    <strong>Note:</strong> "Exposure" measures how digital/automatable the work is, as scored by an LLM. This says nothing about what will actually happen to these occupations &mdash; that depends on demand elasticity, regulation, complementarity, and much more. High exposure &ne; job loss.
+  </div>
+
+  <div class="stat-section">
+    <h3>Total jobs</h3>
+    <div class="stat-big" id="statJobs">&mdash;</div>
+  </div>
+
+  <div class="stat-section">
+    <h3>Total wages</h3>
+    <div class="stat-big" id="statWages">&mdash;</div>
+  </div>
+
+  <div class="stat-section">
+    <h3>Weighted exposure</h3>
+    <div class="stat-big" id="statAvgExposure">&mdash;</div>
+    <div class="stat-label">0&ndash;10 scale &middot; weighted by employment</div>
+  </div>
+
+  <div class="stat-section">
+    <h3>Distribution</h3>
+    <div class="histogram" id="histogram"></div>
+    <div class="hist-labels"><span>0</span><span>5</span><span>10</span></div>
+  </div>
+
+  <div class="stat-section">
+    <h3>Exposure by pay bracket</h3>
+    <div class="hbar-chart" id="payChart"></div>
+  </div>
+
+  <div class="stat-section">
+    <h3>Exposure by TEER level</h3>
+    <div class="hbar-chart" id="teerChart"></div>
+  </div>
+
+  <div class="stat-section">
+    <div class="gradient-legend">
+      <span>Low</span>
+      <canvas id="legendGradient" width="120" height="12"></canvas>
+      <span>High</span>
+    </div>
+  </div>
+</div>
+
+<div id="breadcrumb"></div>
+<div id="treemap"></div>
+<div id="card-grid" class="hidden"></div>
+
+<div id="tooltip">
+  <div class="tt-title"></div>
+  <div class="tt-exposure"></div>
+  <div class="tt-stats"></div>
+  <div class="tt-rationale"></div>
+</div>
+
+<script>
+// ─── Color: muted green → yellow → red ──────────────────────────
+function exposureRGB(score) {
+  const t = Math.max(0, Math.min(10, score)) / 10;
+  // Muted traffic light — lower brightness than pure 255
+  const r = t < 0.5 ? Math.round(t * 2 * 200) : 200;
+  const g = t < 0.5 ? 200 : Math.round((1 - (t - 0.5) * 2) * 200);
+  const b = 30;
+  return [r, g, b];
+}
+
+function exposureColor(score, alpha) {
+  if (score == null) return 'rgba(255,255,255,0.06)';
+  const [r, g, b] = exposureRGB(score);
+  const a = alpha != null ? alpha : 0.55;
+  return `rgba(${r},${g},${b},${a})`;
+}
+
+function textColor(score) {
+  if (score == null) return 'rgba(255,255,255,0.5)';
+  return 'rgba(255,255,255,0.9)';
+}
+
+function titleCase(s) {
+  const lower = new Set(['and','or','the','of','in','for','a','an','to','by','on','at','with','from','as','but','nor','yet','so']);
+  return s.split(' ').map((w, i) => {
+    const lw = w.toLowerCase();
+    if (i === 0 || !lower.has(lw)) return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+    return lw;
+  }).join(' ');
+}
+
+// Job Bank URL for each NOC code
+function jobBankUrl(code) {
+  return `https://www.jobbank.gc.ca/marketreport/summary-occupation/${code}/ca`;
+}
+
+// ─── Squarified treemap layout ──────────────────────────────────
+function squarify(items, x, y, w, h) {
+  const rects = [];
+  const total = items.reduce((s, d) => s + d._area, 0);
+  if (total === 0 || items.length === 0) return rects;
+
+  let remaining = [...items];
+  let cx = x, cy = y, cw = w, ch = h;
+
+  while (remaining.length > 0) {
+    const isWide = cw >= ch;
+    const side = isWide ? ch : cw;
+    const totalRemaining = remaining.reduce((s, d) => s + d._area, 0);
+    const scale = (cw * ch) / totalRemaining;
+
+    let row = [remaining[0]];
+    let rowArea = remaining[0]._area * scale;
+
+    function worstRatio(row, rowArea) {
+      const s = rowArea / side;
+      if (s === 0) return Infinity;
+      let worst = 0;
+      for (const d of row) {
+        const a = d._area * scale;
+        // Aspect ratio: max(width/height, height/width)
+        // width = s, height = a/s
+        const r = Math.max((s * s) / a, a / (s * s));
+        if (r > worst) worst = r;
+      }
+      return worst;
+    }
+
+    let i = 1;
+    while (i < remaining.length) {
+      const next = remaining[i];
+      const newRowArea = rowArea + next._area * scale;
+      const oldWorst = worstRatio(row, rowArea);
+      const newRow = [...row, next];
+      const newWorst = worstRatio(newRow, newRowArea);
+      if (newWorst > oldWorst) break;
+      row = newRow;
+      rowArea = newRowArea;
+      i++;
+    }
+
+    const rowLen = rowArea / side;
+    let offset = 0;
+    for (const d of row) {
+      const a = d._area * scale;
+      const itemLen = a / rowLen;
+      if (isWide) {
+        rects.push({ ...d, _x: cx, _y: cy + offset, _w: rowLen, _h: itemLen });
+      } else {
+        rects.push({ ...d, _x: cx + offset, _y: cy, _w: itemLen, _h: rowLen });
+      }
+      offset += itemLen;
+    }
+
+    if (isWide) { cx += rowLen; cw -= rowLen; }
+    else { cy += rowLen; ch -= rowLen; }
+
+    remaining = remaining.slice(row.length);
+  }
+
+  return rects;
+}
+
+// ─── State ──────────────────────────────────────────────────────
+let allData = [];
+let categoryMap = {};
+let currentView = 'categories';
+const treemapEl = document.getElementById('treemap');
+const tooltip = document.getElementById('tooltip');
+const breadcrumb = document.getElementById('breadcrumb');
+const GAP = 3;
+
+function clearTreemap() { treemapEl.innerHTML = ''; }
+
+function getTreemapSize() {
+  return { w: window.innerWidth - 260, h: window.innerHeight };
+}
+
+// ─── Categories overview ────────────────────────────────────────
+function renderCategories() {
+  currentView = 'categories';
+  clearTreemap();
+  treemapEl.style.display = '';
+  document.getElementById('card-grid').classList.add('hidden');
+  updateBreadcrumb();
+
+  const { w, h } = getTreemapSize();
+  const topPad = 36;
+
+  // Size categories by employment (sqrt-scaled so small sectors stay visible)
+  const catItems = Object.entries(categoryMap)
+    .map(([name, info]) => ({
+      _area: Math.sqrt(info.totalEmp),
+      _name: name,
+      _avgExposure: info.avgExposure,
+      _count: info.items.length,
+      _totalEmp: info.totalEmp,
+    }))
+    .sort((a, b) => b._area - a._area);
+
+  const rects = squarify(catItems, 0, topPad, w, h - topPad);
+
+  for (const r of rects) {
+    const cell = document.createElement('div');
+    cell.className = 'treemap-cell';
+    cell.style.left = (r._x + GAP / 2) + 'px';
+    cell.style.top = (r._y + GAP / 2) + 'px';
+    cell.style.width = Math.max(0, r._w - GAP) + 'px';
+    cell.style.height = Math.max(0, r._h - GAP) + 'px';
+    cell.style.background = exposureColor(r._avgExposure, 0.5);
+
+    const tc = textColor(r._avgExposure);
+    const fontSize = Math.max(12, Math.min(28, r._w / 22, r._h / 4));
+    const subFontSize = Math.max(10, fontSize * 0.6);
+
+    cell.innerHTML = `<div class="cell-label">
+      <div class="cell-title" style="font-size:${fontSize}px;color:${tc}">${titleCase(r._name)}</div>
+      <div class="cell-subtitle" style="font-size:${subFontSize}px;color:${tc}">${(r._totalEmp/1000).toFixed(0)}K jobs &middot; avg ${r._avgExposure.toFixed(1)}/10</div>
+    </div>`;
+
+    cell.addEventListener('click', () => renderCategory(r._name));
+    cell.addEventListener('mouseenter', (e) => showCategoryTooltip(e, r));
+    cell.addEventListener('mousemove', positionTooltip);
+    cell.addEventListener('mouseleave', hideTooltip);
+    treemapEl.appendChild(cell);
+  }
+
+  updateSidebarStats(allData.filter(d => d.exposure != null));
+}
+
+// ─── Category drill-down (treemap) ──────────────────────────────
+const cardGrid = document.getElementById('card-grid');
+
+function renderCategory(catName) {
+  currentView = catName;
+  clearTreemap();
+  treemapEl.style.display = '';
+  cardGrid.classList.add('hidden');
+  updateBreadcrumb();
+
+  const { w, h } = getTreemapSize();
+  const topPad = 36;
+
+  const items = [...categoryMap[catName].items]
+    .map(d => ({
+      ...d,
+      _area: Math.sqrt(d.employment || 1000),
+    }))
+    .sort((a, b) => b._area - a._area);
+
+  const rects = squarify(items, 0, topPad, w, h - topPad);
+
+  for (const r of rects) {
+    const cell = document.createElement('div');
+    cell.className = 'treemap-cell';
+    cell.style.left = (r._x + GAP / 2) + 'px';
+    cell.style.top = (r._y + GAP / 2) + 'px';
+    cell.style.width = Math.max(0, r._w - GAP) + 'px';
+    cell.style.height = Math.max(0, r._h - GAP) + 'px';
+    cell.style.background = exposureColor(r.exposure, 0.5);
+    cell.style.cursor = 'default';
+
+    const tc = textColor(r.exposure);
+    const cellW = r._w - GAP;
+    const cellH = r._h - GAP;
+    const fontSize = Math.max(9, Math.min(16, cellW / 16, cellH / 3));
+    const subFontSize = Math.max(8, fontSize * 0.7);
+
+    // Only show label if cell is large enough
+    if (cellW > 50 && cellH > 28) {
+      const payStr = r.pay ? `$${Math.round(r.pay/1000)}K` : '';
+      const empStr = r.employment ? `${(r.employment/1000).toFixed(0)}K` : '';
+      const meta = [payStr, empStr].filter(Boolean).join(' · ');
+      cell.innerHTML = `<div class="cell-label">
+        <div class="cell-title" style="font-size:${fontSize}px;color:${tc}">${titleCase(r.title)}</div>
+        ${meta ? `<div class="cell-subtitle" style="font-size:${subFontSize}px;color:${tc}">${meta}</div>` : ''}
+      </div>`;
+    } else if (cellW > 30 && cellH > 16) {
+      cell.innerHTML = `<div class="cell-label">
+        <div class="cell-title" style="font-size:${Math.max(8, fontSize * 0.8)}px;color:${tc}">${r.exposure}</div>
+      </div>`;
+    }
+
+    cell.addEventListener('mouseenter', (e) => showOccupationTooltip(e, r));
+    cell.addEventListener('mousemove', positionTooltip);
+    cell.addEventListener('mouseleave', hideTooltip);
+    treemapEl.appendChild(cell);
+  }
+
+  updateSidebarStats(categoryMap[catName].items);
+}
+
+// ─── Breadcrumb ─────────────────────────────────────────────────
+function updateBreadcrumb() {
+  const sub = document.getElementById('subtitleText');
+  if (currentView === 'categories') {
+    breadcrumb.innerHTML = '<span class="crumb active">All Sectors</span>';
+    sub.innerHTML = '516 occupations scored 0&ndash;10 &middot; sized by employment<br>Data from <a href="https://noc.esdc.gc.ca/">NOC/OaSIS</a> &amp; <a href="https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=1410041601">StatsCan</a>';
+  } else {
+    breadcrumb.innerHTML = `
+      <span class="crumb" onclick="renderCategories()">&larr; All Sectors</span>
+      <span class="sep">&rsaquo;</span>
+      <span class="crumb active">${titleCase(currentView)}</span>
+    `;
+    const count = categoryMap[currentView].items.length;
+    sub.innerHTML = `${count} occupations &middot; sized by median salary &middot; hover for details`;
+  }
+}
+
+// ─── Sidebar stats ──────────────────────────────────────────────
+function updateSidebarStats(items) {
+  const scored = items.filter(d => d.exposure != null);
+  const withEmp = scored.filter(d => d.employment);
+
+  // Total jobs
+  const totalJobs = withEmp.reduce((s, d) => s + d.employment, 0);
+  document.getElementById('statJobs').textContent = totalJobs >= 1e6
+    ? (totalJobs / 1e6).toFixed(1) + 'M'
+    : (totalJobs / 1e3).toFixed(0) + 'K';
+
+  // Total wages (employment * median annual pay)
+  const totalWages = withEmp.filter(d => d.pay).reduce((s, d) => s + d.employment * d.pay, 0);
+  document.getElementById('statWages').textContent = totalWages >= 1e12
+    ? '$' + (totalWages / 1e12).toFixed(1) + 'T'
+    : totalWages >= 1e9
+    ? '$' + (totalWages / 1e9).toFixed(0) + 'B'
+    : '$' + (totalWages / 1e6).toFixed(0) + 'M';
+
+  // Employment-weighted exposure
+  const totalEmpScored = withEmp.reduce((s, d) => s + d.employment, 0);
+  const weightedExp = totalEmpScored > 0
+    ? withEmp.reduce((s, d) => s + d.employment * d.exposure, 0) / totalEmpScored
+    : scored.length ? scored.reduce((s, d) => s + d.exposure, 0) / scored.length : 0;
+  document.getElementById('statAvgExposure').textContent = weightedExp.toFixed(1);
+
+  const histEl = document.getElementById('histogram');
+  const buckets = Array(11).fill(0);
+  scored.forEach(d => buckets[Math.round(d.exposure)]++);
+  const maxBucket = Math.max(...buckets, 1);
+  histEl.innerHTML = buckets.map((c, i) =>
+    `<div class="bar" style="height:${c/maxBucket*100}%;background:${exposureColor(i, 0.85)}" title="${i}: ${c}"></div>`
+  ).join('');
+
+  const payBrackets = [
+    { label: '< $40K', min: 0, max: 40000 },
+    { label: '$40–60K', min: 40000, max: 60000 },
+    { label: '$60–80K', min: 60000, max: 80000 },
+    { label: '$80–100K', min: 80000, max: 100000 },
+    { label: '> $100K', min: 100000, max: Infinity },
+  ];
+  document.getElementById('payChart').innerHTML = payBrackets.map(b => {
+    const inB = scored.filter(d => d.pay && d.pay >= b.min && d.pay < b.max);
+    const avgExp = inB.length ? inB.reduce((s,d) => s + d.exposure, 0) / inB.length : 0;
+    return `<div class="hbar-row">
+      <span class="hbar-label">${b.label}</span>
+      <div class="hbar-track"><div class="hbar-fill" style="width:${avgExp*10}%;background:${exposureColor(avgExp, 0.85)}"></div></div>
+      <span class="hbar-val">${avgExp.toFixed(1)}</span>
+    </div>`;
+  }).join('');
+
+  const teerLabels = { '0':'Management','1':'University','2':'College/Trade','3':'Secondary','4':'On-the-job','5':'Short demo' };
+  document.getElementById('teerChart').innerHTML = Object.entries(teerLabels).map(([t, label]) => {
+    const inT = scored.filter(d => d.teer === t);
+    const avgExp = inT.length ? inT.reduce((s,d) => s + d.exposure, 0) / inT.length : 0;
+    return `<div class="hbar-row">
+      <span class="hbar-label">${label}</span>
+      <div class="hbar-track"><div class="hbar-fill" style="width:${avgExp*10}%;background:${exposureColor(avgExp, 0.85)}"></div></div>
+      <span class="hbar-val">${avgExp.toFixed(1)}</span>
+    </div>`;
+  }).join('');
+}
+
+// ─── Tooltips ───────────────────────────────────────────────────
+function showCategoryTooltip(e, r) {
+  const tt = tooltip;
+  tt.querySelector('.tt-title').textContent = r._name;
+  tt.querySelector('.tt-exposure').innerHTML =
+    `<span style="color:${exposureColor(r._avgExposure, 0.9)};font-weight:600">Avg Exposure: ${r._avgExposure.toFixed(1)}/10</span>`;
+  tt.querySelector('.tt-stats').innerHTML =
+    `<span class="label">Occupations</span><span class="value">${r._count}</span>` +
+    `<span class="label">Employment</span><span class="value">${(r._totalEmp/1000).toFixed(0)}K</span>`;
+  tt.querySelector('.tt-rationale').textContent = 'Click to explore individual occupations';
+  tt.classList.add('visible');
+  positionTooltip(e);
+}
+
+function showOccupationTooltip(e, r) {
+  const tt = tooltip;
+  tt.querySelector('.tt-title').textContent = r.title;
+  tt.querySelector('.tt-exposure').innerHTML =
+    `<span style="color:${exposureColor(r.exposure, 0.9)};font-weight:600">AI Exposure: ${r.exposure}/10</span>`;
+
+  const stats = [];
+  if (r.pay) stats.push(['Median pay', `$${r.pay.toLocaleString()}/yr`]);
+  if (r.pay_hourly) stats.push(['Hourly', `$${r.pay_hourly.toFixed(2)}/hr`]);
+  if (r.employment) stats.push(['Employment', `${(r.employment/1000).toFixed(1)}K`]);
+  stats.push(['NOC', r.code]);
+  stats.push(['TEER', `${r.teer} – ${r.teer_desc}`]);
+
+  tt.querySelector('.tt-stats').innerHTML = stats.map(([l, v]) =>
+    `<span class="label">${l}</span><span class="value">${v}</span>`
+  ).join('');
+  tt.querySelector('.tt-rationale').textContent = r.exposure_rationale || '';
+  tt.classList.add('visible');
+  positionTooltip(e);
+}
+
+function positionTooltip(e) {
+  let tx = e.clientX + 16;
+  let ty = e.clientY + 16;
+  if (tx + 380 > window.innerWidth) tx = e.clientX - 396;
+  if (ty + 200 > window.innerHeight) ty = e.clientY - 216;
+  tooltip.style.left = tx + 'px';
+  tooltip.style.top = ty + 'px';
+}
+
+function hideTooltip() { tooltip.classList.remove('visible'); }
+
+// ─── Init ───────────────────────────────────────────────────────
+async function init() {
+  const res = await fetch('data.json');
+  allData = await res.json();
+
+  const scored = allData.filter(d => d.exposure != null);
+
+  // Build category map with total employment for sizing
+  categoryMap = {};
+  scored.forEach(d => {
+    if (!categoryMap[d.category]) categoryMap[d.category] = { items: [], avgExposure: 0, totalEmp: 0 };
+    categoryMap[d.category].items.push(d);
+    categoryMap[d.category].totalEmp += d.employment || 1000; // floor for missing
+  });
+  for (const info of Object.values(categoryMap)) {
+    info.avgExposure = info.items.reduce((s, d) => s + d.exposure, 0) / info.items.length;
+  }
+
+  // Legend gradient
+  const legendCanvas = document.getElementById('legendGradient');
+  const lctx = legendCanvas.getContext('2d');
+  for (let i = 0; i < 120; i++) {
+    lctx.fillStyle = exposureColor(i / 12, 0.85);
+    lctx.fillRect(i, 0, 1, 12);
+  }
+
+  renderCategories();
+  window.addEventListener('resize', () => {
+    if (currentView === 'categories') renderCategories();
+    else renderCategory(currentView);
+  });
+}
+
+init();
+</script>
+</body>
+</html>

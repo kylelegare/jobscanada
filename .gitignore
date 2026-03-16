@@ -1,0 +1,6 @@
+.env
+14100416.csv
+14100416_MetaData.csv
+pages/
+__pycache__/
+*.pyc
