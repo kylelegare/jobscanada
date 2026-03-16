@@ -314,21 +314,12 @@ body {
   padding-top: 8px;
 }
 
-/* ─── Mobile toggle button ─── */
-#sidebar-toggle {
+/* ─── Mobile compact stats row ─── */
+.mobile-stats-row {
   display: none;
-  position: fixed;
-  bottom: 12px;
-  left: 12px;
-  z-index: 25;
-  background: var(--bg2);
-  border: 1px solid rgba(255,255,255,0.15);
-  color: var(--fg);
-  font-size: 12px;
-  padding: 8px 14px;
-  border-radius: 20px;
-  cursor: pointer;
-  backdrop-filter: blur(8px);
+}
+#sidebar-details-toggle {
+  display: none;
 }
 
 /* ─── Mobile ─── */
@@ -341,17 +332,58 @@ body {
     max-height: none;
     border-right: none;
     border-bottom: 1px solid rgba(255,255,255,0.05);
-    padding: 16px 16px 12px;
+    padding: 12px 16px;
+    gap: 10px;
   }
-  #sidebar.collapsed {
-    max-height: 0;
-    padding: 0 16px;
-    overflow: hidden;
-    border-bottom: none;
-  }
-  #sidebar.collapsed + #breadcrumb { top: 0; }
 
-  #sidebar-toggle { display: block; }
+  /* Hide desktop stat sections, show compact row instead */
+  .mobile-stats-row {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+  }
+  .mobile-stats-row .m-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    flex: 1;
+  }
+  .mobile-stats-row .m-stat h3 {
+    font-size: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--fg2);
+  }
+  .mobile-stats-row .m-stat .m-val {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+
+  /* Hide full stat sections on mobile by default */
+  #sidebar .caveat,
+  #sidebar .stat-label,
+  #sidebar .desktop-stats { display: none; }
+
+  /* Show details when expanded */
+  #sidebar.expanded .caveat,
+  #sidebar.expanded .stat-label,
+  #sidebar.expanded .desktop-stats { display: flex; }
+  #sidebar.expanded .desktop-stats { flex-direction: column; gap: 18px; }
+  #sidebar.expanded .mobile-stats-row { display: none; }
+
+  #sidebar-details-toggle {
+    display: inline-block;
+    background: none;
+    border: none;
+    color: var(--fg2);
+    font-size: 11px;
+    cursor: pointer;
+    padding: 2px 0;
+    align-self: flex-start;
+  }
 
   #treemap {
     position: relative;
@@ -393,49 +425,60 @@ body {
     <div class="subtitle" id="subtitleText">516 occupations scored 0&ndash;10 &middot; click a sector to explore<br>Data from <a href="https://noc.esdc.gc.ca/">NOC/OaSIS</a>, scored by Gemini Flash</div>
   </div>
 
+  <!-- Compact stats row (mobile only) -->
+  <div class="mobile-stats-row">
+    <div class="m-stat"><h3>Jobs</h3><div class="m-val" id="mobileJobs">&mdash;</div></div>
+    <div class="m-stat"><h3>Wages</h3><div class="m-val" id="mobileWages">&mdash;</div></div>
+    <div class="m-stat"><h3>Exposure</h3><div class="m-val" id="mobileExposure">&mdash;</div></div>
+  </div>
+  <button id="sidebar-details-toggle" onclick="document.getElementById('sidebar').classList.toggle('expanded'); this.textContent = document.getElementById('sidebar').classList.contains('expanded') ? '▲ Less' : '▼ More'">▼ More</button>
+
+  <!-- Full stats (desktop always visible, mobile on expand) -->
   <div class="caveat">
     <strong>Note:</strong> "Exposure" measures how digital/automatable the work is, as scored by an LLM. This says nothing about what will actually happen to these occupations &mdash; that depends on demand elasticity, regulation, complementarity, and much more. High exposure &ne; job loss.
   </div>
 
   <div class="stat-label" style="line-height:1.5"><a href="https://noc.esdc.gc.ca/" style="color:var(--fg2)">NOC</a> = National Occupational Classification &middot; <a href="https://noc.esdc.gc.ca/Training/TeerDescriptions" style="color:var(--fg2)">TEER</a> = Training, Education &amp; Experience Required</div>
 
-  <div class="stat-section">
-    <h3>Total jobs</h3>
-    <div class="stat-big" id="statJobs">&mdash;</div>
-  </div>
+  <div class="desktop-stats">
+    <div class="stat-section">
+      <h3>Total jobs</h3>
+      <div class="stat-big" id="statJobs">&mdash;</div>
+    </div>
 
-  <div class="stat-section">
-    <h3>Total wages</h3>
-    <div class="stat-big" id="statWages">&mdash;</div>
-  </div>
+    <div class="stat-section">
+      <h3>Total wages</h3>
+      <div class="stat-big" id="statWages">&mdash;</div>
+    </div>
 
-  <div class="stat-section">
-    <h3>Weighted exposure</h3>
-    <div class="stat-big" id="statAvgExposure">&mdash;</div>
-    <div class="stat-label">0&ndash;10 scale &middot; weighted by employment</div>
-  </div>
+    <div class="stat-section">
+      <h3>Weighted exposure</h3>
+      <div class="stat-big" id="statAvgExposure">&mdash;</div>
+      <div class="stat-label">0&ndash;10 scale &middot; weighted by employment</div>
+    </div>
 
-  <div class="stat-section">
-    <h3>Distribution</h3>
-    <div class="histogram" id="histogram"></div>
-    <div class="hist-labels"><span>0</span><span>5</span><span>10</span></div>
-  </div>
+    <div class="stat-section">
+      <h3>Distribution</h3>
+      <div class="histogram" id="histogram"></div>
+      <div class="hist-labels"><span>0</span><span>5</span><span>10</span></div>
+    </div>
 
-  <div class="stat-section">
-    <h3>Exposure by pay bracket</h3>
-    <div class="hbar-chart" id="payChart"></div>
-  </div>
+    <div class="stat-section">
+      <h3>Exposure by pay bracket</h3>
+      <div class="hbar-chart" id="payChart"></div>
+    </div>
 
-  <div class="stat-section">
-    <h3>Exposure by TEER level</h3>
-    <div class="hbar-chart" id="teerChart"></div>
-  </div>
+    <div class="stat-section">
+      <h3>Exposure by TEER level</h3>
+      <div class="hbar-chart" id="teerChart"></div>
+    </div>
 
-  <div class="stat-section">
-    <div class="gradient-legend">
-      <span>Low</span>
-      <canvas id="legendGradient" width="120" height="12"></canvas>
-      <span>High</span>
+    <div class="stat-section">
+      <div class="gradient-legend">
+        <span>Low</span>
+        <canvas id="legendGradient" width="120" height="12"></canvas>
+        <span>High</span>
+      </div>
     </div>
   </div>
 </div>
@@ -443,8 +486,6 @@ body {
 <div id="breadcrumb"></div>
 <div id="treemap"></div>
 <div id="card-grid" class="hidden"></div>
-
-<button id="sidebar-toggle" onclick="document.getElementById('sidebar').classList.toggle('collapsed'); this.textContent = document.getElementById('sidebar').classList.contains('collapsed') ? '↑ Stats' : '↓ Hide stats'">↓ Hide stats</button>
 
 <div id="tooltip">
   <div class="tt-title"></div>
@@ -570,9 +611,12 @@ function clearTreemap() { treemapEl.innerHTML = ''; }
 
 function isMobile() { return window.innerWidth <= 700; }
 
-function getTreemapSize() {
+function getTreemapSize(itemCount) {
   if (isMobile()) {
-    return { w: window.innerWidth, h: window.innerHeight * 0.7 };
+    // For drill-down with many items, make treemap taller so cells are readable
+    const baseH = window.innerHeight * 0.7;
+    const h = itemCount && itemCount > 15 ? Math.max(baseH, itemCount * 18) : baseH;
+    return { w: window.innerWidth, h };
   }
   return { w: window.innerWidth - 260, h: window.innerHeight };
 }
@@ -582,6 +626,7 @@ function renderCategories() {
   currentView = 'categories';
   clearTreemap();
   treemapEl.style.display = '';
+  treemapEl.style.height = '';  // reset drill-down height
   document.getElementById('card-grid').classList.add('hidden');
   updateBreadcrumb();
 
@@ -619,16 +664,7 @@ function renderCategories() {
       <div class="cell-subtitle" style="font-size:${subFontSize}px;color:${tc}">${(r._totalEmp/1000).toFixed(0)}K jobs &middot; avg ${r._avgExposure.toFixed(1)}/10</div>
     </div>`;
 
-    cell.addEventListener('click', (e) => {
-      if (isMobile() && !cell._tapped) {
-        e.stopPropagation();
-        cell._tapped = true;
-        showCategoryTooltip(e, r);
-        setTimeout(() => { cell._tapped = false; }, 2000);
-        return;
-      }
-      renderCategory(r._name);
-    });
+    cell.addEventListener('click', () => renderCategory(r._name));
     cell.addEventListener('mouseenter', (e) => showCategoryTooltip(e, r));
     cell.addEventListener('mousemove', positionTooltip);
     cell.addEventListener('mouseleave', hideTooltip);
@@ -648,15 +684,18 @@ function renderCategory(catName) {
   cardGrid.classList.add('hidden');
   updateBreadcrumb();
 
-  const { w, h } = getTreemapSize();
-  const topPad = 36;
-
   const items = [...categoryMap[catName].items]
     .map(d => ({
       ...d,
       _area: Math.sqrt(d.employment || 1000),
     }))
     .sort((a, b) => b._area - a._area);
+
+  const { w, h } = getTreemapSize(items.length);
+  const topPad = 36;
+
+  // On mobile, set explicit height for scrollable treemap
+  if (isMobile()) treemapEl.style.height = h + 'px';
 
   const rects = squarify(items, 0, topPad, w, h - topPad);
 
@@ -736,11 +775,12 @@ function updateSidebarStats(items) {
 
   // Total wages (employment * median annual pay)
   const totalWages = withEmp.filter(d => d.pay).reduce((s, d) => s + d.employment * d.pay, 0);
-  document.getElementById('statWages').textContent = totalWages >= 1e12
+  const wagesStr = totalWages >= 1e12
     ? '$' + (totalWages / 1e12).toFixed(1) + 'T'
     : totalWages >= 1e9
     ? '$' + (totalWages / 1e9).toFixed(0) + 'B'
     : '$' + (totalWages / 1e6).toFixed(0) + 'M';
+  document.getElementById('statWages').textContent = wagesStr;
 
   // Employment-weighted exposure
   const totalEmpScored = withEmp.reduce((s, d) => s + d.employment, 0);
@@ -748,6 +788,12 @@ function updateSidebarStats(items) {
     ? withEmp.reduce((s, d) => s + d.employment * d.exposure, 0) / totalEmpScored
     : scored.length ? scored.reduce((s, d) => s + d.exposure, 0) / scored.length : 0;
   document.getElementById('statAvgExposure').textContent = weightedExp.toFixed(1);
+
+  // Mobile compact stats
+  const jobsStr = document.getElementById('statJobs').textContent;
+  document.getElementById('mobileJobs').textContent = jobsStr;
+  document.getElementById('mobileWages').textContent = wagesStr;
+  document.getElementById('mobileExposure').textContent = weightedExp.toFixed(1);
 
   const histEl = document.getElementById('histogram');
   const buckets = Array(11).fill(0);
@@ -874,12 +920,6 @@ async function init() {
   for (let i = 0; i < 120; i++) {
     lctx.fillStyle = exposureColor(i / 12, 0.85);
     lctx.fillRect(i, 0, 1, 12);
-  }
-
-  // Start collapsed on mobile so treemap is visible immediately
-  if (isMobile()) {
-    document.getElementById('sidebar').classList.add('collapsed');
-    document.getElementById('sidebar-toggle').textContent = '↑ Stats';
   }
 
   renderCategories();
